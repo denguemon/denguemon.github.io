@@ -197,6 +197,32 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
     }
 
+    .section-panel {
+      margin-top: 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(56, 182, 197, 0.28);
+      border-radius: 18px;
+      padding: 16px 16px 14px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.14);
+    }
+
+    .section-tab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 12px;
+      margin-bottom: 10px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(188, 251, 158, 0.96), rgba(56, 182, 197, 0.22));
+      border: 1px solid rgba(56, 182, 197, 0.34);
+      color: var(--ink);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
     .tutorial-shell h2 {
       margin: 0 0 12px;
       padding-bottom: 10px;
@@ -204,6 +230,12 @@
       color: var(--ink);
       font-size: clamp(1.8rem, 2.4vw, 2.8rem);
       letter-spacing: 0.02em;
+    }
+
+    .section-panel h2 {
+      margin: 0 0 10px;
+      border-bottom: 1px solid rgba(56, 182, 197, 0.2);
+      padding-bottom: 8px;
     }
 
     .tutorial-shell h3 {
@@ -384,7 +416,8 @@
             This page is a tutorial for the basics of GitHub readmes. The palette is now set to the exact lime and teal you requested: #BCFB9E and #38B6C5.
           </p>
 
-          <section id="alignment" style="margin-top:22px;">
+          <section id="alignment" class="section-panel">
+            <div class="section-tab">Alignment</div>
             <h2>1. Moving Stuff Around</h2>
             <p>Use <code>div</code> tags to control where content sits on the page.</p>
 
@@ -412,13 +445,15 @@
             </div>
           </section>
 
-          <section id="links" style="margin-top:26px;">
+          <section id="links" class="section-panel">
+            <div class="section-tab">Links</div>
             <h2>2. Adding Links</h2>
             <p>Use brackets and parentheses to make clickable links.</p>
             <pre><code>[Check out my website](https://github.io)</code></pre>
           </section>
 
-          <section id="images" style="margin-top:26px;">
+          <section id="images" class="section-panel">
+            <div class="section-tab">Images</div>
             <h2>3. Adding Images &amp; Resizing</h2>
             <p>Use an exclamation mark plus a link to display an image.</p>
             <pre><code>![Cool Profile Banner](https://unsplash.com)</code></pre>
@@ -434,7 +469,8 @@
             <pre><code>&lt;img src="your-image-link.png" width="200" /&gt;</code></pre>
           </section>
 
-          <section id="writing" style="margin-top:26px;">
+          <section id="writing" class="section-panel">
+            <div class="section-tab">Writing</div>
             <h2>4. Writing</h2>
             <p>Use custom styling to make specific words or lines stand out from the rest of the page.</p>
 
@@ -451,7 +487,8 @@
             <pre><code>$\color{#00AC60}{\text{This text is custom green}}$</code></pre>
           </section>
 
-          <section id="tools" style="margin-top:26px;">
+          <section id="tools" class="section-panel">
+            <div class="section-tab">Tools</div>
             <h2>5. Good Tools to Use</h2>
             <ul>
               <li><a href="https://yoksel.github.io/svg-gradient-map/#/" target="_blank">SVG Gradient Map Filter</a>: recolor assets into a consistent visual theme.</li>
@@ -460,7 +497,8 @@
             </ul>
           </section>
 
-          <section style="margin-top:26px; text-align:center;">
+          <section class="section-panel" style="margin-top:26px; text-align:center;">
+            <div class="section-tab">Help</div>
             <h2>Need Help?</h2>
             <p>just ask on my atabook!</p>
             <a href="https://khomedy.atabook.org" target="_blank" class="cta">Visit atabook</a>
