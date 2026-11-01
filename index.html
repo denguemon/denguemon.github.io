@@ -1,130 +1,197 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Simple Github Readme Guide</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>denguemon | GitHub Readme Guide</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-1: #f3f4f2;
+            --bg-2: #dff6d7;
+            --green-1: #00ac60;
+            --green-2: #18c77a;
+            --green-3: #b8ef92;
+            --ink: #0f1d2a;
+            --card: rgba(255,255,255,0.6);
+            --card-strong: #f7f8f0;
+            --line: rgba(15, 29, 42, 0.15);
+            --shadow: 0 18px 30px rgba(15, 29, 42, 0.12);
+            --shadow-strong: 0 0 0 3px #ffffff, 0 10px 0 0 rgba(15, 29, 42, 0.85), 0 18px 30px rgba(15, 29, 42, 0.15);
+            --radius: 26px;
+        }
+
+        * { box-sizing: border-box; }
+
         html {
             scroll-behavior: smooth;
         }
 
         body {
-            background: linear-gradient(to bottom, #E0E0E0, #92C11B);
-            background-attachment: fixed;
-            color: #000339;
-            font-family: 'Fredoka One', 'Fredoka', 'Segoe UI', sans-serif;
-            font-weight: 400;
-            line-height: 1.7;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        header {
-            background-color: #00AC60;
-            padding: 25px;
-            border-radius: 24px;
-            border: 3px solid #000000;
-            box-shadow: 0 0 0 4px #FFFFFF, 0 6px 0px 4px rgba(0,0,0,1);
-            margin-bottom: 55px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #000339;
             margin: 0;
-            padding-bottom: 5px;
-            font-size: 36px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .section-box {
-            position: relative;
-            background-color: #00AC60;
-            padding: 45px;
-            margin: 40px 20px 65px 20px;
-            border: 4px solid #000000;
-            border-radius: 24px;
-            box-shadow: 0 0 0 4px #FFFFFF, 0 8px 0px 4px rgba(0,0,0,1);
+            font-family: 'Fredoka', 'Segoe UI', sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(184,239,146,0.4), transparent 32%),
+                linear-gradient(to bottom, var(--bg-1), var(--bg-2));
+            line-height: 1.7;
             text-align: center;
-            overflow: hidden;
-        }
-
-        h2 {
-            color: #000339;
-            margin-top: 0;
-            border-bottom: 3px solid #000000;
-            padding-bottom: 8px;
-            font-size: 24px;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        h3 {
-            color: #000339;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        p, li {
-            color: #000339;
-            font-size: 17px;
-            text-align: center;
-        }
-
-        code {
-            background-color: #000000;
-            color: #ff758f;
-            padding: 3px 8px;
-            border-radius: 6px;
-            font-family: 'Courier New', monospace;
-            font-size: 15px;
-        }
-
-        pre {
-            background-color: #000000;
-            padding: 18px;
-            border-radius: 12px;
-            overflow-x: auto;
-            border: 3px solid #000000;
-            border-left: 6px solid #000339;
-            text-align: left;
-            margin: 20px auto;
-        }
-
-        pre code {
-            color: #a7c957;
-            padding: 0;
-            background: none;
         }
 
         a {
-            color: #000339;
+            color: var(--ink);
             text-decoration: underline;
+            transition: color 0.2s ease;
         }
 
         a:hover {
             color: #ffffff;
         }
 
-        ul {
-            padding-left: 0;
-            list-style: none;
+        .container {
+            width: min(980px, calc(100% - 28px));
+            margin: 0 auto;
+            padding: 42px 0 80px;
+        }
+
+        .hero {
+            background: rgba(255,255,255,0.14);
+            border: 3px solid rgba(15, 29, 42, 0.8);
+            border-radius: 28px;
+            box-shadow: var(--shadow-strong);
+            padding: 30px 26px 18px;
+            margin-bottom: 32px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-family: 'Fredoka One', 'Fredoka', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            letter-spacing: 0.5px;
+        }
+
+        .hero .byline {
+            margin-top: 12px;
+            font-size: 1.1rem;
+            font-weight: 500;
             display: inline-block;
+        }
+
+        .hero .byline a {
+            color: var(--ink);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .intro {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 22px;
+            margin: 26px 0 10px;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.42);
+            border: 2px solid rgba(15, 29, 42, 0.8);
+            border-radius: 999px;
+            padding: 7px 14px;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.46);
+            border: 3px solid rgba(15, 29, 42, 0.82);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 26px 22px;
+            margin: 24px 0;
             text-align: left;
         }
 
-        li {
-            margin-bottom: 10px;
+        .card h2 {
+            margin: 0 0 16px;
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            border-bottom: 3px solid rgba(15, 29, 42, 0.8);
+            padding-bottom: 10px;
+            font-family: 'Fredoka One', 'Fredoka', sans-serif;
+            letter-spacing: 0.3px;
+        }
+
+        .card h3 {
+            margin: 18px 0 10px;
+            font-size: 1.2rem;
+            font-family: 'Fredoka One', 'Fredoka', sans-serif;
+        }
+
+        .card p,
+        .card li {
+            font-size: 1.05rem;
+            color: var(--ink);
+            margin: 0 0 12px;
+        }
+
+        .card ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .mini {
+            background: rgba(255,255,255,0.4);
+            border: 2px solid rgba(15, 29, 42, 0.7);
+            border-radius: 18px;
+            padding: 16px 18px;
+            min-height: 100%;
+        }
+
+        code {
+            background: #111827;
+            color: #f4ffb0;
+            border-radius: 8px;
+            padding: 3px 8px;
+            font-size: 0.9rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        pre {
+            background: #111827;
+            color: #b9f6a7;
+            border-radius: 16px;
+            padding: 18px 16px;
+            overflow-x: auto;
+            border: 3px solid #000000;
+            margin: 18px 0 0;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+        }
+
+        pre code {
+            padding: 0;
+            background: transparent;
+            color: #b9f6a7;
         }
 
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(28px);
             transition: opacity 0.7s ease, transform 0.7s ease;
         }
 
@@ -132,97 +199,157 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--green-1);
+            color: #fff;
+            border-radius: 999px;
+            padding: 12px 18px;
+            border: 2px solid rgba(15, 29, 42, 0.8);
+            box-shadow: 0 5px 0 rgba(15, 29, 42, 0.8);
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 18px;
+        }
+
+        .cta:hover {
+            background: var(--green-2);
+            color: #fff;
+        }
+
+        @media (max-width: 760px) {
+            .intro,
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 24px 18px 16px;
+            }
+
+            .card {
+                padding: 20px 16px;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header class="hero reveal">
+            <h1>Simple GitHub Readme Guide</h1>
+            <div class="byline">
+                <a href="https://github.com/denguemon" target="_blank">By @denguemon</a>
+            </div>
+            <div class="pill-row">
+                <span class="pill">Alignment</span>
+                <span class="pill">Links</span>
+                <span class="pill">Images</span>
+                <span class="pill">Writing</span>
+                <span class="pill">Tools</span>
+            </div>
+        </header>
 
-<header class="reveal">
-    <h1>Simple Github Readme Guide</h1>
-    <p style="font-style: italic; margin: 5px 0 0 0; color: #000339; font-family: 'Fredoka', sans-serif;">
-        <a href="https://github.com/denguemon" target="_blank" style="color: #000339; text-decoration: underline;">By @denguemon</a>
-    </p>
-</header>
+        <main>
+            <section class="card reveal">
+                <h2>1. Moving Stuff Around</h2>
+                <p>Use <code>div</code> tags to control how content sits on the page.</p>
 
-<div class="section-box reveal">
-    <h2>1. Moving Stuff Around (Alignment)</h2>
-    <p>div tags for positioning layouts.</p>
-    
-    <p>To explicitly keep things on the left:</p>
-    <pre><code>&lt;div align="left"&gt;
+                <div class="grid-2">
+                    <div class="mini">
+                        <h3>Left</h3>
+                        <pre><code>&lt;div align="left"&gt;
     This text stays on the left.
 &lt;/div&gt;</code></pre>
-
-    <p>To center your stuff:</p>
-    <pre><code>&lt;div align="center"&gt;
+                    </div>
+                    <div class="mini">
+                        <h3>Center</h3>
+                        <pre><code>&lt;div align="center"&gt;
     This text is centered.
 &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
 
-    <p>To push things all the way to the right:</p>
-    <pre><code>&lt;div align="right"&gt;
+                <div class="mini" style="margin-top: 18px;">
+                    <h3>Right</h3>
+                    <pre><code>&lt;div align="right"&gt;
     This text goes to the right.
 &lt;/div&gt;</code></pre>
-</div>
+                </div>
+            </section>
 
-<div class="section-box reveal">
-    <h2>2. Adding Links</h2>
-    <p>brackets and parentheses code syntax for clickable hyperlinks.</p>
-    <pre><code>[Check out my website](https://github.io)</code></pre>
-</div>
+            <section class="card reveal">
+                <h2>2. Adding Links</h2>
+                <p>Use brackets and parentheses to make clickable links.</p>
+                <pre><code>[Check out my website](https://github.io)</code></pre>
+            </section>
 
-<div class="section-box reveal">
-    <h2>3. Adding Images & Resizing</h2>
-    <p>exclamation markdown syntax for displaying art visuals.</p>
-    <pre><code>![Cool Profile Banner](https://unsplash.com)</code></pre>
+            <section class="card reveal">
+                <h2>3. Adding Images & Resizing</h2>
+                <p>Use an exclamation mark plus a link to display an image.</p>
+                <pre><code>![Cool Profile Banner](https://unsplash.com)</code></pre>
 
-    <h3>Where to Host Your Images</h3>
-    <ul>
-        <li><a href="https://filegarden.com" target="_blank">File Garden</a>: platform for uploading permanent digital assets and pixel graphics.</li>
-        <li><a href="https://catbox.moe" target="_blank">Catbox.moe</a>: file host for getting quick raw asset links.</li>
-    </ul>
+                <h3>Where to host images</h3>
+                <ul>
+                    <li><a href="https://filegarden.com" target="_blank">File Garden</a>: for permanent digital assets and art.</li>
+                    <li><a href="https://catbox.moe" target="_blank">Catbox.moe</a>: quick file hosting for raw image links.</li>
+                </ul>
 
-    <h3>Fixing Giant Images (Sizing)</h3>
-    <p>img widths for custom dimension properties.</p>
-    <pre><code>&lt;img src="your-image-link.png" width="200" /&gt;</code></pre>
-</div>
+                <h3>Fixing giant images</h3>
+                <p>Set a width so the image stays at a manageable size.</p>
+                <pre><code>&lt;img src="your-image-link.png" width="200" /&gt;</code></pre>
+            </section>
 
-<div class="section-box reveal">
-    <h2>4. Writing</h2>
-    <p>Use custom styling when you want specific words or lines to stand out from the rest of the page. This helps make key notes, labels, or important phrases easier to notice.</p>
+            <section class="card reveal">
+                <h2>4. Writing</h2>
+                <p>Use custom styling to make specific words or lines stand out from the rest of the page.</p>
 
-    <p>Dropdown text is a reveal-style effect where a short heading shows first, and clicking the arrow expands the hidden content underneath.</p>
-    <pre><code>&lt;details&gt;
+                <p>Dropdown text is a reveal-style block: a short heading appears first, and clicking the arrow shows the hidden content below it.</p>
+                <pre><code>&lt;details&gt;
     &lt;summary&gt;Click me&lt;/summary&gt;
     This is the hidden content that appears when the dropdown opens.
 &lt;/details&gt;</code></pre>
 
-    <p>You can change the color of a single sentence or word by wrapping it in a styled block:</p>
-    <pre><code>&lt;span style="color:#00AC60;"&gt;This text is custom green&lt;/span&gt;</code></pre>
+                <p>To change the color of a single sentence or word:</p>
+                <pre><code>&lt;span style="color:#00AC60;"&gt;This text is custom green&lt;/span&gt;</code></pre>
 
-    <p>If you want a more script-style approach, you can also use color markup like this:</p>
-    <pre><code>$\color{#00AC60}{\text{This text is custom green}}$</code></pre>
-</div>
+                <p>If you want a slightly more advanced version, you can also use color markup:</p>
+                <pre><code>$\color{#00AC60}{\text{This text is custom green}}$</code></pre>
+            </section>
 
-<div class="section-box reveal" style="text-align: center;">
-    <h2>Need Help?</h2>
-    <p>just ask on my atabook!</p>
-    <p><a href="https://khomedy.atabook.org" target="_blank" style="font-weight: bold; font-size: 19px;">atabook</a></p>
-</div>
+            <section class="card reveal">
+                <h2>5. Good Tools to Use</h2>
+                <ul>
+                    <li><a href="https://yoksel.github.io" target="_blank">SVG Gradient Map Filter</a>: recolor assets into a consistent visual theme.</li>
+                    <li><a href="https://shields.io" target="_blank">Shields.io</a>: make colorful badge-style labels.</li>
+                    <li><a href="https://hits.sh" target="_blank">hits.sh</a>: track traffic with a visitor badge.</li>
+                </ul>
+            </section>
 
-<script>
-    const revealItems = document.querySelectorAll('.reveal');
+            <section class="card reveal" style="text-align: center;">
+                <h2>Need Help?</h2>
+                <p>just ask on my atabook!</p>
+                <a class="cta" href="https://khomedy.atabook.org" target="_blank">Visit atabook</a>
+            </section>
+        </main>
+    </div>
 
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+    <script>
+        const revealItems = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.15
         });
-    }, {
-        threshold: 0.15
-    });
 
-    revealItems.forEach(item => revealObserver.observe(item));
-</script>
-
+        revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
 </body>
 </html>
