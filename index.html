@@ -9,18 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-1: #f3f4f2;
-            --bg-2: #dff6d7;
-            --green-1: #00ac60;
-            --green-2: #18c77a;
-            --green-3: #b8ef92;
-            --ink: #0f1d2a;
-            --card: rgba(255,255,255,0.6);
-            --card-strong: #f7f8f0;
-            --line: rgba(15, 29, 42, 0.15);
-            --shadow: 0 18px 30px rgba(15, 29, 42, 0.12);
-            --shadow-strong: 0 0 0 3px #ffffff, 0 10px 0 0 rgba(15, 29, 42, 0.85), 0 18px 30px rgba(15, 29, 42, 0.15);
-            --radius: 26px;
+            --bg-1: #edf7f3;
+            --bg-2: #dff4f4;
+            --bg-3: #d7f5d0;
+            --glass: rgba(255,255,255,0.36);
+            --glass-strong: rgba(255,255,255,0.56);
+            --glass-border: rgba(255,255,255,0.7);
+            --green-1: #7ad3a1;
+            --green-2: #46c58e;
+            --green-3: #1ea878;
+            --green-4: #d8f7d1;
+            --ink: #12343f;
+            --shadow-soft: 0 20px 60px rgba(30, 108, 94, 0.12);
+            --shadow-card: 0 18px 40px rgba(22, 66, 66, 0.12), inset 0 1px 0 rgba(255,255,255,0.8);
+            --radius: 28px;
         }
 
         * { box-sizing: border-box; }
@@ -34,47 +36,69 @@
             font-family: 'Fredoka', 'Segoe UI', sans-serif;
             color: var(--ink);
             background:
-                radial-gradient(circle at top left, rgba(184,239,146,0.4), transparent 32%),
-                linear-gradient(to bottom, var(--bg-1), var(--bg-2));
+                radial-gradient(circle at 15% 15%, rgba(255,255,255,0.92), transparent 28%),
+                radial-gradient(circle at 85% 0%, rgba(167, 237, 194, 0.6), transparent 30%),
+                linear-gradient(to bottom, var(--bg-1), var(--bg-2) 40%, var(--bg-3));
             line-height: 1.7;
             text-align: center;
+            min-height: 100vh;
         }
 
         a {
             color: var(--ink);
             text-decoration: underline;
-            transition: color 0.2s ease;
+            transition: color 0.2s ease, transform 0.2s ease;
         }
 
         a:hover {
             color: #ffffff;
+            transform: translateY(-1px);
         }
 
         .container {
-            width: min(980px, calc(100% - 28px));
+            width: min(1000px, calc(100% - 28px));
             margin: 0 auto;
-            padding: 42px 0 80px;
+            padding: 38px 0 90px;
         }
 
         .hero {
-            background: rgba(255,255,255,0.14);
-            border: 3px solid rgba(15, 29, 42, 0.8);
-            border-radius: 28px;
-            box-shadow: var(--shadow-strong);
-            padding: 30px 26px 18px;
-            margin-bottom: 32px;
+            position: relative;
+            background: linear-gradient(135deg, rgba(255,255,255,0.38), rgba(255,255,255,0.12));
+            border: 1px solid var(--glass-border);
+            border-radius: 34px;
+            box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 28px 24px 18px;
+            margin-bottom: 26px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(255,255,255,0.34), rgba(255,255,255,0.02) 35%, rgba(255,255,255,0.18) 60%, rgba(255,255,255,0.04));
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
             margin: 0;
             font-family: 'Fredoka One', 'Fredoka', sans-serif;
-            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-size: clamp(2.4rem, 5vw, 4.15rem);
             letter-spacing: 0.5px;
+            color: var(--ink);
+            text-shadow: 0 1px 0 rgba(255,255,255,0.5);
         }
 
         .hero .byline {
-            margin-top: 12px;
-            font-size: 1.1rem;
+            margin-top: 10px;
+            font-size: 1.08rem;
             font-weight: 500;
             display: inline-block;
         }
@@ -82,14 +106,7 @@
         .hero .byline a {
             color: var(--ink);
             text-decoration: underline;
-            font-weight: 600;
-        }
-
-        .intro {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 22px;
-            margin: 26px 0 10px;
+            font-weight: 700;
         }
 
         .pill-row {
@@ -97,36 +114,52 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
-            margin-top: 16px;
+            margin-top: 18px;
         }
 
         .pill {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255,255,255,0.42);
-            border: 2px solid rgba(15, 29, 42, 0.8);
             border-radius: 999px;
+            background: rgba(255,255,255,0.4);
+            border: 1px solid rgba(255,255,255,0.8);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 8px 18px rgba(32, 98, 95, 0.08);
             padding: 7px 14px;
-            font-size: 0.88rem;
+            font-size: 0.8rem;
             font-weight: 600;
+            color: var(--ink);
         }
 
         .card {
-            background: rgba(255,255,255,0.46);
-            border: 3px solid rgba(15, 29, 42, 0.82);
+            position: relative;
+            background: linear-gradient(135deg, rgba(255,255,255,0.42), rgba(255,255,255,0.18));
+            border: 1px solid var(--glass-border);
             border-radius: var(--radius);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-card);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 26px 22px;
-            margin: 24px 0;
+            margin: 22px 0;
             text-align: left;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.24), transparent 36%, rgba(255,255,255,0.08));
+            pointer-events: none;
+        }
+
+        .card > * {
+            position: relative;
+            z-index: 1;
         }
 
         .card h2 {
-            margin: 0 0 16px;
-            font-size: clamp(1.4rem, 3vw, 2rem);
-            border-bottom: 3px solid rgba(15, 29, 42, 0.8);
+            margin: 0 0 14px;
+            font-size: clamp(1.5rem, 3vw, 2.1rem);
             padding-bottom: 10px;
+            border-bottom: 3px solid rgba(18, 52, 63, 0.8);
             font-family: 'Fredoka One', 'Fredoka', sans-serif;
             letter-spacing: 0.3px;
         }
@@ -139,33 +172,34 @@
 
         .card p,
         .card li {
-            font-size: 1.05rem;
             color: var(--ink);
+            font-size: 1.04rem;
             margin: 0 0 12px;
         }
 
         .card ul {
-            margin: 0;
             padding-left: 18px;
+            margin: 0;
         }
 
         .grid-2 {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 20px;
+            gap: 18px;
         }
 
         .mini {
-            background: rgba(255,255,255,0.4);
-            border: 2px solid rgba(15, 29, 42, 0.7);
-            border-radius: 18px;
-            padding: 16px 18px;
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.7);
+            border-radius: 20px;
+            padding: 15px 14px;
             min-height: 100%;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
         }
 
         code {
-            background: #111827;
-            color: #f4ffb0;
+            background: rgba(18, 52, 63, 0.9);
+            color: #eef9c9;
             border-radius: 8px;
             padding: 3px 8px;
             font-size: 0.9rem;
@@ -173,26 +207,26 @@
         }
 
         pre {
-            background: #111827;
-            color: #b9f6a7;
-            border-radius: 16px;
+            background: rgba(18, 52, 63, 0.92);
+            color: #bff6c1;
+            border-radius: 18px;
             padding: 18px 16px;
             overflow-x: auto;
-            border: 3px solid #000000;
+            border: 2px solid rgba(255,255,255,0.2);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 10px 18px rgba(18,52,63,0.1);
             margin: 18px 0 0;
-            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
         }
 
         pre code {
             padding: 0;
             background: transparent;
-            color: #b9f6a7;
+            color: #bff6c1;
         }
 
         .reveal {
             opacity: 0;
-            transform: translateY(28px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
+            transform: translateY(30px);
+            transition: opacity 0.75s ease, transform 0.75s ease;
         }
 
         .reveal.visible {
@@ -204,24 +238,25 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: var(--green-1);
-            color: #fff;
+            background: linear-gradient(180deg, var(--green-1), var(--green-2));
+            border: 1px solid rgba(255,255,255,0.65);
+            color: white;
             border-radius: 999px;
             padding: 12px 18px;
-            border: 2px solid rgba(15, 29, 42, 0.8);
-            box-shadow: 0 5px 0 rgba(15, 29, 42, 0.8);
+            box-shadow: 0 8px 20px rgba(40, 132, 95, 0.24), inset 0 1px 0 rgba(255,255,255,0.4);
             font-weight: 700;
             text-decoration: none;
-            margin-top: 18px;
+            margin-top: 14px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .cta:hover {
-            background: var(--green-2);
-            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(40, 132, 95, 0.28), inset 0 1px 0 rgba(255,255,255,0.5);
+            color: white;
         }
 
         @media (max-width: 760px) {
-            .intro,
             .grid-2 {
                 grid-template-columns: 1fr;
             }
@@ -239,23 +274,25 @@
 <body>
     <div class="container">
         <header class="hero reveal">
-            <h1>Simple GitHub Readme Guide</h1>
-            <div class="byline">
-                <a href="https://github.com/denguemon" target="_blank">By @denguemon</a>
-            </div>
-            <div class="pill-row">
-                <span class="pill">Alignment</span>
-                <span class="pill">Links</span>
-                <span class="pill">Images</span>
-                <span class="pill">Writing</span>
-                <span class="pill">Tools</span>
+            <div class="hero-inner">
+                <h1>Simple GitHub Readme Guide</h1>
+                <div class="byline">
+                    <a href="https://github.com/denguemon" target="_blank">By @denguemon</a>
+                </div>
+                <div class="pill-row">
+                    <span class="pill">Alignment</span>
+                    <span class="pill">Links</span>
+                    <span class="pill">Images</span>
+                    <span class="pill">Writing</span>
+                    <span class="pill">Tools</span>
+                </div>
             </div>
         </header>
 
         <main>
             <section class="card reveal">
                 <h2>1. Moving Stuff Around</h2>
-                <p>Use <code>div</code> tags to control how content sits on the page.</p>
+                <p>Use <code>div</code> tags to control where content sits on the page.</p>
 
                 <div class="grid-2">
                     <div class="mini">
