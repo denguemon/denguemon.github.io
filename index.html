@@ -30,6 +30,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 24px;
         }
 
         body {
@@ -267,6 +268,10 @@
             color: white;
         }
 
+        section[id] {
+            scroll-margin-top: 28px;
+        }
+
         @media (max-width: 760px) {
             .container {
                 width: min(100%, calc(100% - 24px));
@@ -403,6 +408,10 @@
         });
 
         revealItems.forEach((item) => revealObserver.observe(item));
+
+        window.addEventListener('load', () => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        });
     </script>
 </body>
 </html>
