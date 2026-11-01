@@ -1,12 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>denguemon's site</title>
+    <title>Markdown Guide for GitHub Profile Repositories</title>
+    <style>
+        body {
+            background-color: #E0E0E0; /* Light gray background */
+            color: #00AC60;            /* Primary green text color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .container {
+            background-color: #000339; /* Dark blue textbox container */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #00AC60;            /* Matching green headings */
+            border-bottom: 2px solid #00AC60;
+            padding-bottom: 10px;
+            text-align: center;
+            font-size: 36px;
+        }
+        h2 {
+            color: #00AC60;            /* Matching green subheadings */
+            margin-top: 40px;
+            border-bottom: 1px solid #00AC60;
+            padding-bottom: 5px;
+        }
+        p, li {
+            color: #00AC60;            /* Green text elements */
+        }
+        code {
+            background-color: #0d1117;
+            color: #ff758f;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 16px;
+        }
+        pre {
+            background-color: #0d1117;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #00AC60;
+        }
+        pre code {
+            color: #a7c957;
+            padding: 0;
+            background: none;
+        }
+        a {
+            color: #00AC60;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #ffffff;            /* Highlighting clarity */
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>text</h1>
-    <p>text</p>
+<div class="container">
+    <h1>GitHub Markdown Profile Customization Guide</h1>
+    <p style="text-align: center; font-style: italic;">By @denguemon</p>
+    
+    <p>This guide explains how to format, design, and decorate a GitHub profile README using Markdown, custom HTML layouts, graphics tools, and badges.</p>
+
+    <h2>1. Text Alignment</h2>
+    <p>By default, everything in a GitHub README aligns to the left. You can control layout alignments using standard HTML tags inside your Markdown file.</p>
+    
+    <p>To center text, images, or assets:</p>
+    <pre><code>&lt;div align="center"&gt;
+    This text and any assets here will be centered.
+&lt;/div&gt;</code></pre>
+
+    <p>To align text or assets to the right:</p>
+    <pre><code>&lt;div align="right"&gt;
+    This text and any assets here will move to the right side.
+&lt;/div&gt;</code></pre>
+
+    <h2>2. How to Add Links</h2>
+    <p>Adding clickable text hyperlinks inside your profile README is easy. Put the text you want users to click inside square brackets, followed by the actual web URL inside parentheses.</p>
+    <pre><code>[Click here to see my website](https://github.io)</code></pre>
+
+    <h2>3. How to Add Photos & Images</h2>
+    <p>To display an image directly on your profile, use an exclamation mark first, then an alt-text description inside square brackets, followed by the direct image file URL inside parentheses:</p>
+    <pre><code>![My Custom Banner Image](https://your-image-url-here.png)</code></pre>
+
+    <h3>Recommended Image Hosting Platforms</h3>
+    <p>Since you need direct file links (ending in .png, .jpg, or .gif) to make images show up on GitHub, use these free image and asset hosting options:</p>
+    <ul>
+        <li><a href="https://filegarden.com/" target="_blank">File Garden</a>: An excellent free platform for uploading permanent digital assets, pixel art sprites, and custom graphics templates.</li>
+        <li><a href="https://catbox.moe" target="_blank">Catbox.moe</a>: A simple file host that provides fast, direct raw file URLs perfect for custom README badges and images.</li>
+    </ul>
+
+    <h3>Image Sizing</h3>
+    <p>Standard Markdown tags do not allow you to resize photos. To prevent layout scaling issues, use the HTML image tag to specify the width or height explicitly.</p>
+    <pre><code>&lt;img src="your-image-url-here.png" width="200" /&gt;</code></pre>
+    <p>Using just <code>width</code> (in pixels) forces the height to scale down proportionally so the image stays in shape.</p>
+
+    <h2>4. How to Add Colored Text</h2>
+    <p>GitHub strips away normal HTML inline styling for colors. To bypass this restriction and insert colored text on a README profile, you must use standard LaTeX math markup blocks.</p>
+    
+    <p>To write text in a specific color, use this syntax pattern:</p>
+    <pre><code>$\color{HexColorCode}{\text{Your text here}}$</code></pre>
+
+    <p>Example for bright green text:</p>
+    <pre><code>$\color{#00AC60}{\text{This text is custom green}}$</code></pre>
+
+    <h2>5. Gradient Map Websites</h2>
+    <p>Gradient mapping allows you to recolor assets or text visuals to fit a unified color palette.</p>
+    <ul>
+        <li><a href="https://github.io" target="_blank">SVG Gradient Map Filter</a>: Excellent tool for creating custom SVG filter overlays to gradient-map graphics inside digital web layouts.</li>
+    </ul>
+
+    <h2>6. Badge Websites</h2>
+    <p>Badges add compact, stylized, color-coded rows of data to share stats, socials, or tools used.</p>
+    <ul>
+        <li><a href="https://shields.io" target="_blank">Shields.io</a>: The standard platform for creating static or dynamic technical badges. Use it to generate color blocks containing custom text and brand icons.</li>
+        <li><a href="https://hits.sh" target="_blank">hits.sh</a>: Simple counter badge that logs how many views your profile repository receives.</li>
+    </ul>
+
+    <h2>7. Graphic Design Platforms</h2>
+    <p>Custom assets, banners, transparent profile margins, and text titles require raster or vector image editors before uploading to GitHub.</p>
+    <ul>
+        <li><strong>Pixlr:</strong> A web-based photo editor suitable for quick transparent cropping, layering, and canvas sizing directly in the browser.</li>
+        <li><strong>ibisPaint:</strong> Popular mobile-friendly illustration tool capable of handling pixel art layouts and precise asset scaling.</li>
+        <li><strong>Procreate:</strong> Advanced tablet illustration engine used for high-fidelity custom banners, hand-drawn graphics, and detailed profile artwork assets.</li>
+    </ul>
+</div>
 
 </body>
 </html>
+
