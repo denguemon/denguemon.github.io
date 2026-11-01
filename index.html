@@ -9,20 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-1: #edf7f3;
-            --bg-2: #dff4f4;
-            --bg-3: #d7f5d0;
-            --glass: rgba(255,255,255,0.36);
-            --glass-strong: rgba(255,255,255,0.56);
-            --glass-border: rgba(255,255,255,0.7);
-            --green-1: #7ad3a1;
-            --green-2: #46c58e;
-            --green-3: #1ea878;
+            --bg-1: #ebf9fa;
+            --bg-2: #d7f2f9;
+            --bg-3: #c9f1de;
+            --glass: rgba(255,255,255,0.42);
+            --glass-strong: rgba(255,255,255,0.62);
+            --glass-border: rgba(255,255,255,0.8);
+            --green-1: #96e0d4;
+            --green-2: #76c9c6;
+            --green-3: #4bb3bc;
             --green-4: #d8f7d1;
-            --ink: #12343f;
-            --shadow-soft: 0 20px 60px rgba(30, 108, 94, 0.12);
-            --shadow-card: 0 18px 40px rgba(22, 66, 66, 0.12), inset 0 1px 0 rgba(255,255,255,0.8);
-            --radius: 28px;
+            --ink: #103f50;
+            --muted: rgba(16, 63, 80, 0.72);
+            --shadow-soft: 0 24px 55px rgba(50, 108, 120, 0.14);
+            --shadow-card: 0 20px 42px rgba(28, 82, 89, 0.12), inset 0 1px 0 rgba(255,255,255,0.82);
+            --radius: 30px;
         }
 
         * { box-sizing: border-box; }
@@ -36,9 +37,9 @@
             font-family: 'Fredoka', 'Segoe UI', sans-serif;
             color: var(--ink);
             background:
-                radial-gradient(circle at 15% 15%, rgba(255,255,255,0.92), transparent 28%),
-                radial-gradient(circle at 85% 0%, rgba(167, 237, 194, 0.6), transparent 30%),
-                linear-gradient(to bottom, var(--bg-1), var(--bg-2) 40%, var(--bg-3));
+                radial-gradient(circle at 12% 12%, rgba(255,255,255,0.9), transparent 25%),
+                radial-gradient(circle at 82% 0%, rgba(161, 232, 245, 0.7), transparent 30%),
+                linear-gradient(to bottom, var(--bg-1), var(--bg-2) 35%, var(--bg-3));
             line-height: 1.7;
             text-align: center;
             min-height: 100vh;
@@ -47,7 +48,7 @@
         a {
             color: var(--ink);
             text-decoration: underline;
-            transition: color 0.2s ease, transform 0.2s ease;
+            transition: color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
         }
 
         a:hover {
@@ -56,21 +57,21 @@
         }
 
         .container {
-            width: min(1000px, calc(100% - 28px));
+            width: min(1100px, calc(100% - 36px));
             margin: 0 auto;
-            padding: 38px 0 90px;
+            padding: 58px 0 90px;
         }
 
         .hero {
             position: relative;
-            background: linear-gradient(135deg, rgba(255,255,255,0.38), rgba(255,255,255,0.12));
+            background: linear-gradient(135deg, rgba(255,255,255,0.38), rgba(255,255,255,0.18));
             border: 1px solid var(--glass-border);
-            border-radius: 34px;
-            box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,0.8);
+            border-radius: 38px;
+            box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            padding: 28px 24px 18px;
-            margin-bottom: 26px;
+            padding: 34px 28px 22px;
+            margin-bottom: 30px;
             overflow: hidden;
         }
 
@@ -78,7 +79,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(120deg, rgba(255,255,255,0.34), rgba(255,255,255,0.02) 35%, rgba(255,255,255,0.18) 60%, rgba(255,255,255,0.04));
+            background: linear-gradient(120deg, rgba(255,255,255,0.28), rgba(255,255,255,0.02) 40%, rgba(255,255,255,0.15) 68%, rgba(255,255,255,0.03));
             pointer-events: none;
         }
 
@@ -90,15 +91,15 @@
         .hero h1 {
             margin: 0;
             font-family: 'Fredoka One', 'Fredoka', sans-serif;
-            font-size: clamp(2.4rem, 5vw, 4.15rem);
-            letter-spacing: 0.5px;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            letter-spacing: 0.4px;
             color: var(--ink);
-            text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+            text-shadow: 0 2px 0 rgba(255,255,255,0.4);
         }
 
         .hero .byline {
-            margin-top: 10px;
-            font-size: 1.08rem;
+            margin-top: 12px;
+            font-size: 1.04rem;
             font-weight: 500;
             display: inline-block;
         }
@@ -114,17 +115,17 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
-            margin-top: 18px;
+            margin-top: 20px;
         }
 
         .pill {
             display: inline-block;
             border-radius: 999px;
-            background: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.38);
             border: 1px solid rgba(255,255,255,0.8);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 8px 18px rgba(32, 98, 95, 0.08);
-            padding: 7px 14px;
-            font-size: 0.8rem;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 10px 18px rgba(41, 127, 132, 0.1);
+            padding: 8px 16px;
+            font-size: 0.82rem;
             font-weight: 600;
             color: var(--ink);
             text-decoration: none;
@@ -132,22 +133,22 @@
         }
 
         .pill:hover {
-            background: rgba(255,255,255,0.6);
+            background: rgba(255,255,255,0.62);
             transform: translateY(-2px);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 12px 18px rgba(32, 98, 95, 0.12);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 12px 16px rgba(41, 127, 132, 0.12);
             color: var(--ink);
         }
 
         .card {
             position: relative;
-            background: linear-gradient(135deg, rgba(255,255,255,0.42), rgba(255,255,255,0.18));
+            background: linear-gradient(135deg, rgba(255,255,255,0.46), rgba(255,255,255,0.2));
             border: 1px solid var(--glass-border);
             border-radius: var(--radius);
             box-shadow: var(--shadow-card);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            padding: 26px 22px;
-            margin: 22px 0;
+            padding: 30px 26px;
+            margin: 24px 0;
             text-align: left;
             overflow: hidden;
         }
@@ -156,7 +157,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.24), transparent 36%, rgba(255,255,255,0.08));
+            background: linear-gradient(135deg, rgba(255,255,255,0.28), transparent 38%, rgba(255,255,255,0.1));
             pointer-events: none;
         }
 
@@ -166,12 +167,12 @@
         }
 
         .card h2 {
-            margin: 0 0 14px;
-            font-size: clamp(1.5rem, 3vw, 2.1rem);
+            margin: 0 0 16px;
+            font-size: clamp(1.5rem, 2.7vw, 2.2rem);
             padding-bottom: 10px;
-            border-bottom: 3px solid rgba(18, 52, 63, 0.8);
+            border-bottom: 3px solid rgba(16, 63, 80, 0.8);
             font-family: 'Fredoka One', 'Fredoka', sans-serif;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.25px;
         }
 
         .card h3 {
@@ -183,7 +184,7 @@
         .card p,
         .card li {
             color: var(--ink);
-            font-size: 1.04rem;
+            font-size: 1.02rem;
             margin: 0 0 12px;
         }
 
@@ -201,15 +202,15 @@
         .mini {
             background: rgba(255,255,255,0.18);
             border: 1px solid rgba(255,255,255,0.7);
-            border-radius: 20px;
-            padding: 15px 14px;
+            border-radius: 22px;
+            padding: 16px 16px;
             min-height: 100%;
             box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
         }
 
         code {
             background: rgba(18, 52, 63, 0.9);
-            color: #eef9c9;
+            color: #f1efbf;
             border-radius: 8px;
             padding: 3px 8px;
             font-size: 0.9rem;
@@ -253,7 +254,7 @@
             color: white;
             border-radius: 999px;
             padding: 12px 18px;
-            box-shadow: 0 8px 20px rgba(40, 132, 95, 0.24), inset 0 1px 0 rgba(255,255,255,0.4);
+            box-shadow: 0 8px 20px rgba(40, 132, 95, 0.18), inset 0 1px 0 rgba(255,255,255,0.4);
             font-weight: 700;
             text-decoration: none;
             margin-top: 14px;
@@ -262,11 +263,16 @@
 
         .cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 24px rgba(40, 132, 95, 0.28), inset 0 1px 0 rgba(255,255,255,0.5);
+            box-shadow: 0 10px 24px rgba(40, 132, 95, 0.22), inset 0 1px 0 rgba(255,255,255,0.5);
             color: white;
         }
 
         @media (max-width: 760px) {
+            .container {
+                width: min(100%, calc(100% - 24px));
+                padding-top: 34px;
+            }
+
             .grid-2 {
                 grid-template-columns: 1fr;
             }
@@ -276,7 +282,7 @@
             }
 
             .card {
-                padding: 20px 16px;
+                padding: 22px 16px;
             }
         }
     </style>
