@@ -19,7 +19,6 @@
       --line: rgba(56, 182, 197, 0.38);
       --panel: rgba(188, 251, 158, 0.36);
       --panel-strong: rgba(56, 182, 197, 0.12);
-      --search: #E9FB9E;
     }
 
     * { box-sizing: border-box; }
@@ -141,47 +140,6 @@
         inset 0 -2px 0 rgba(56, 182, 197, 0.1),
         0 3px 10px rgba(56, 182, 197, 0.08);
       text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-    }
-
-    .search-row {
-      background: linear-gradient(180deg, rgba(188, 251, 158, 0.26), rgba(56, 182, 197, 0.12));
-      border-bottom: 1px solid var(--line);
-      padding: 16px 20px 20px;
-    }
-
-    .search-bar {
-      width: min(1450px, 100%);
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .search-field {
-      flex: 1;
-      height: 64px;
-      border-radius: 20px;
-      border: 1px solid rgba(56, 182, 197, 0.45);
-      background: var(--search);
-      box-shadow: inset 0 2px 5px rgba(56, 182, 197, 0.08), inset 0 1px 0 rgba(255,255,255,0.15);
-      padding: 0 18px;
-      font-family: inherit;
-      font-size: clamp(1rem, 1.55vw, 1.7rem);
-      color: var(--ink);
-      outline: none;
-    }
-
-    .search-button {
-      min-width: 150px;
-      height: 64px;
-      border-radius: 20px;
-      border: 1px solid rgba(56, 182, 197, 0.48);
-      background: linear-gradient(180deg, rgba(188, 251, 158, 0.9), rgba(56, 182, 197, 0.14) 55%, rgba(188, 251, 158, 0.7));
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), 0 3px 10px rgba(56, 182, 197, 0.08);
-      color: var(--ink);
-      font-family: inherit;
-      font-size: clamp(1rem, 1.55vw, 1.7rem);
-      cursor: pointer;
     }
 
     .content {
@@ -367,14 +325,6 @@
         justify-content: flex-start;
       }
 
-      .search-bar {
-        flex-direction: column;
-      }
-
-      .search-field, .search-button {
-        width: 100%;
-      }
-
       .grid-2 {
         grid-template-columns: 1fr;
       }
@@ -402,19 +352,12 @@
         <a href="#tools">Tools</a>
       </nav>
 
-      <div class="search-row">
-        <div class="search-bar">
-          <input class="search-field" type="text" placeholder="Search" />
-          <button class="search-button">Search</button>
-        </div>
-      </div>
-
       <main class="content">
         <div class="tutorial-shell">
           <h2>Ropes of Readme!</h2>
 
           <p class="replacement-text">
-            This page is a tutorial for the basics of GitHub readmes. if its helpful, maybe follow @denguemon on github!
+            This page is a tutorial for the basics of GitHub readmes. The palette is now set to the exact lime and teal you requested: #BCFB9E and #38B6C5.
           </p>
 
           <section id="alignment" class="section-panel">
@@ -450,14 +393,14 @@
             <div class="section-tab">Links</div>
             <h2>2. Adding Links</h2>
             <p>Use brackets and parentheses to make clickable links.</p>
-            <pre><code>[name for link](YOUR LINK)</code></pre>
+            <pre><code>[Check out my website](https://github.io)</code></pre>
           </section>
 
           <section id="images" class="section-panel">
             <div class="section-tab">Images</div>
             <h2>3. Adding Images &amp; Resizing</h2>
             <p>Use an exclamation mark plus a link to display an image.</p>
-            <pre><code>![name](YOUR PHOTO LINK)</code></pre>
+            <pre><code>![Cool Profile Banner](https://unsplash.com)</code></pre>
 
             <h3>Where to host images</h3>
             <ul>
@@ -481,8 +424,10 @@
     This is the hidden content that appears when the dropdown opens.
 &lt;/details&gt;</code></pre>
 
+            <p>To change the color of a single sentence or word:</p>
+            <pre><code>&lt;span style="color:#00AC60;"&gt;This text is custom green&lt;/span&gt;</code></pre>
 
-            <p>If you want to color texts normally, use color markup:</p>
+            <p>If you want a slightly more advanced version, you can also use color markup:</p>
             <pre><code>$\color{#00AC60}{\text{This text is custom green}}$</code></pre>
           </section>
 
@@ -493,7 +438,6 @@
               <li><a href="https://yoksel.github.io/svg-gradient-map/#/" target="_blank">SVG Gradient Map Filter</a>: recolor assets into a consistent visual theme.</li>
               <li><a href="https://shields.io" target="_blank">Shields.io</a>: make colorful badge-style labels.</li>
               <li><a href="https://hits.sh" target="_blank">hits.sh</a>: track traffic with a visitor badge.</li>
-              <li><a href="https://spotify-github-profile.kittinanx.com/api/login" target="_blank">kittinanx</a>: show current/recent played music via spotify on your readme.</li>
             </ul>
           </section>
 
