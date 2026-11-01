@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>github readme tutorial !</title>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <title>Simple Github Readme Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background: linear-gradient(to bottom, #E0E0E0, #92C11B);
             background-attachment: fixed;
             color: #000339;
-            font-family: 'Fredoka', 'Segoe UI', sans-serif;
-            font-weight: 500;
-            line-height: 1.6;
+            font-family: 'Fredoka One', 'Fredoka', 'Segoe UI', sans-serif;
+            font-weight: 400;
+            line-height: 1.7;
             max-width: 900px;
             margin: 0 auto;
             padding: 60px 20px;
+            text-align: center;
         }
-        
+
         header {
             background-color: #00AC60;
             padding: 25px;
@@ -34,6 +39,7 @@
             padding-bottom: 5px;
             font-size: 36px;
             font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         .section-box {
@@ -44,8 +50,10 @@
             border: 4px solid #000000;
             border-radius: 24px;
             box-shadow: 0 0 0 4px #FFFFFF, 0 8px 0px 4px rgba(0,0,0,1);
+            text-align: center;
+            overflow: hidden;
         }
-        
+
         h2 {
             color: #000339;
             margin-top: 0;
@@ -53,11 +61,19 @@
             padding-bottom: 8px;
             font-size: 24px;
             font-weight: 600;
+            text-align: center;
         }
-        
+
+        h3 {
+            color: #000339;
+            font-size: 20px;
+            text-align: center;
+        }
+
         p, li {
             color: #000339;
             font-size: 17px;
+            text-align: center;
         }
 
         code {
@@ -65,10 +81,10 @@
             color: #ff758f;
             padding: 3px 8px;
             border-radius: 6px;
-            font-family: monospace;
+            font-family: 'Courier New', monospace;
             font-size: 15px;
         }
-        
+
         pre {
             background-color: #000000;
             padding: 18px;
@@ -76,40 +92,56 @@
             overflow-x: auto;
             border: 3px solid #000000;
             border-left: 6px solid #000339;
+            text-align: left;
+            margin: 20px auto;
         }
-        
+
         pre code {
             color: #a7c957;
             padding: 0;
             background: none;
         }
-        
+
         a {
             color: #000339;
             text-decoration: underline;
         }
-        
+
         a:hover {
             color: #ffffff;
         }
-        
+
         ul {
-            padding-left: 20px;
+            padding-left: 0;
+            list-style: none;
+            display: inline-block;
+            text-align: left;
         }
-        
+
         li {
             margin-bottom: 10px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
 
-<header>
+<header class="reveal">
     <h1>Simple Github Readme Guide</h1>
-    <p style="font-style: italic; margin: 5px 0 0 0; color: #000339;">By @denguemon</p>
+    <p style="font-style: italic; margin: 5px 0 0 0; color: #000339; font-family: 'Fredoka', sans-serif;">By @denguemon</p>
 </header>
 
-<div class="section-box">
+<div class="section-box reveal">
     <h2>1. Moving Stuff Around (Alignment)</h2>
     <p>div tags for positioning layouts.</p>
     
@@ -129,13 +161,13 @@
 &lt;/div&gt;</code></pre>
 </div>
 
-<div class="section-box">
+<div class="section-box reveal">
     <h2>2. Adding Links</h2>
     <p>brackets and parentheses code syntax for clickable hyperlinks.</p>
     <pre><code>[Check out my website](https://github.io)</code></pre>
 </div>
 
-<div class="section-box">
+<div class="section-box reveal">
     <h2>3. Adding Images & Resizing</h2>
     <p>exclamation markdown syntax for displaying art visuals.</p>
     <pre><code>![Cool Profile Banner](https://unsplash.com)</code></pre>
@@ -151,30 +183,38 @@
     <pre><code>&lt;img src="your-image-link.png" width="200" /&gt;</code></pre>
 </div>
 
-<div class="section-box">
-    <h2>4. Writing in Color</h2>
-    <p>LaTeX block scripts for bypassing color block configurations.</p>
+<div class="section-box reveal">
+    <h2>4. Writing</h2>
+    <p>Use custom styling when you want specific words or lines to stand out from the rest of the page. This helps make key notes, labels, or important phrases easier to notice.</p>
     
-    <pre><code>$\color{#HexColorCode}{\text{Your text here}}$</code></pre>
+    <p>You can change the color of a single sentence or word by wrapping it in a styled block:</p>
+    <pre><code>&lt;span style="color:#00AC60;"&gt;This text is custom green&lt;/span&gt;</code></pre>
 
-    <p>Example to get bright green text:</p>
+    <p>If you want a more script-style approach, you can also use color markup like this:</p>
     <pre><code>$\color{#00AC60}{\text{This text is custom green}}$</code></pre>
 </div>
 
-<div class="section-box">
-    <h2>5. Good Tools to Use</h2>
-    <ul>
-        <li><a href="https://yoksel.github.io" target="_blank">SVG Gradient Map Filter</a>: online tool for recoloring assets into unified themes.</li>
-        <li><a href="https://shields.io" target="_blank">Shields.io</a>: badge creator for generating colorful custom status templates.</li>
-        <li><a href="https://hits.sh" target="_blank">hits.sh</a>: tracker badges for counting total channel traffic visits.</li>
-    </ul>
-</div>
-
-<div class="section-box" style="text-align: center;">
+<div class="section-box reveal" style="text-align: center;">
     <h2>Need Help?</h2>
     <p>just ask on my atabook!</p>
     <p><a href="https://khomedy.atabook.org" target="_blank" style="font-weight: bold; font-size: 19px;">atabook</a></p>
 </div>
+
+<script>
+    const revealItems = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    revealItems.forEach(item => revealObserver.observe(item));
+</script>
 
 </body>
 </html>
