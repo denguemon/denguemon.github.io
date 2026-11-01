@@ -2,9 +2,9 @@
 <html>
 <head>
     <title>github readme tutorial !</title>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <style>
         body {
             background: linear-gradient(to bottom, #E0E0E0, #92C11B);
@@ -23,7 +23,7 @@
             padding: 25px;
             border-radius: 24px;
             border: 3px solid #000000;
-            box-shadow: 0 0 0 4px #FFFFFF;
+            box-shadow: 0 0 0 4px #FFFFFF, 0 6px 0px 4px rgba(0,0,0,1);
             margin-bottom: 55px;
             text-align: center;
         }
@@ -42,27 +42,8 @@
             padding: 45px;
             margin: 40px 20px 65px 20px;
             border: 4px solid #000000;
+            border-radius: 24px;
             box-shadow: 0 0 0 4px #FFFFFF, 0 8px 0px 4px rgba(0,0,0,1);
-        }
-
-        /* Border attachments pointing the cute rounded bumps OUTWARD around all 4 sides */
-        .section-box::before {
-            content: "";
-            position: absolute;
-            top: -16px;
-            bottom: -16px;
-            left: -16px;
-            right: -16px;
-            background-image: 
-                radial-gradient(circle at 16px 16px, #000339 12px, #000000 14px, #FFFFFF 16px, transparent 18px),
-                radial-gradient(circle at 16px 16px, #000339 12px, #000000 14px, #FFFFFF 16px, transparent 18px),
-                radial-gradient(circle at 16px 16px, #000339 12px, #000000 14px, #FFFFFF 16px, transparent 18px),
-                radial-gradient(circle at 16px 16px, #000339 12px, #000000 14px, #FFFFFF 16px, transparent 18px);
-            background-size: 32px 32px;
-            background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-            background-position: top center, bottom center, left center, right center;
-            pointer-events: none;
-            z-index: 1;
         }
         
         h2 {
@@ -151,7 +132,7 @@
 <div class="section-box">
     <h2>2. Adding Links</h2>
     <p>Want a clickable link? Put the word people click inside square brackets `[ ]` and the website link inside normal parentheses `( )` right next to it with no spaces:</p>
-    <pre><code>[Check out my website](https://github.io)</code></pre>
+    <pre><code>[Check out my website](https://denguemon.github.io)</code></pre>
 </div>
 
 <div class="section-box">
@@ -186,13 +167,14 @@
     <p>Check out these websites to make your layout look way better:</p>
     <ul>
         <li><a href="https://github.io" target="_blank">SVG Gradient Map Filter</a>: Cool tool to add nice color overlays onto your graphics.</li>
+        <li><a href="https://shields.io" target="_blank">Shields.io</a>: Makes those clean, colorful status tags and button badges you see on profiles.</li>
     </ul>
 </div>
 
 <div class="section-box" style="text-align: center;">
     <h2>Need Help?</h2>
     <p>If you're stuck or need help making your profile look right, ask for help on my atabook!</p>
-    <p><a href="https://khomedy.atabook.org" target="_blank" style="font-weight: bold; font-size: 19px;">atabook</a></p>
+    <p><a href="https://khomedy.atabook.org" target="_blank" style="font-weight: bold; font-size: 19px;">Visit my atabook: khomedy</a></p>
 </div>
 
 </body>
