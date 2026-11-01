@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Readmes of Your Own</title>
+  <title>Readmes of Our Own</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,19 +16,19 @@
       --panel-strong: rgba(255, 250, 232, 0.82);
       --ink: #1f4d46;
       --muted: #4f736a;
-      --line: rgba(108, 171, 148, 0.38);
+      --line: rgba(0, 214, 139, 0.3);
       --glass-1: rgba(255, 246, 209, 0.76);
-      --glass-2: rgba(144, 240, 202, 0.42);
+      --glass-2: rgba(0, 214, 139, 0.22);
       --glass-3: rgba(255, 246, 209, 0.28);
       --button-top: #fffaf0;
       --button-mid: #fff5d7;
       --button-bottom: #e9f9c9;
-      --button-shadow: rgba(74, 158, 127, 0.25);
+      --button-shadow: rgba(0, 214, 139, 0.22);
       --mint-1: #dfffe8;
       --mint-2: #baf6d3;
       --mint-3: #8fe9bb;
-      --mint-4: #53eda8;
-      --dark-mint: #2d7c68;
+      --mint-4: #00d68b;
+      --dark-mint: #0c8d66;
     }
 
     * { box-sizing: border-box; }
@@ -42,7 +42,7 @@
       color: var(--ink);
       background:
         radial-gradient(circle at top left, rgba(255,255,255,0.98), rgba(255,255,255,0) 22%),
-        radial-gradient(circle at 70% 16%, rgba(150, 247, 203, 0.55), rgba(150, 247, 203, 0) 23%),
+        radial-gradient(circle at 70% 16%, rgba(0, 214, 139, 0.34), rgba(0, 214, 139, 0) 23%),
         linear-gradient(180deg, #fffdf6 0%, #f7f8e8 18%, #eefdf0 40%, #e9f6ed 100%);
     }
 
@@ -57,19 +57,19 @@
       background:
         linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.06)),
         radial-gradient(circle at 12% 20%, rgba(255,246,209,0.9), transparent 26%),
-        radial-gradient(circle at 78% 10%, rgba(115, 235, 180, 0.25), transparent 20%);
+        radial-gradient(circle at 78% 10%, rgba(0, 214, 139, 0.18), transparent 20%);
     }
 
     .wrapper {
       width: min(1520px, 100%);
       margin: 0 auto;
       background: rgba(255, 246, 209, 0.18);
-      border: 1px solid rgba(117, 194, 163, 0.45);
+      border: 1px solid rgba(0, 214, 139, 0.35);
       border-radius: 30px;
       box-shadow:
-        0 18px 36px rgba(90, 150, 131, 0.18),
+        0 18px 36px rgba(12, 141, 102, 0.14),
         inset 0 2px 0 rgba(255,255,255,0.88),
-        inset 0 -1px 0 rgba(90, 160, 142, 0.18);
+        inset 0 -1px 0 rgba(0, 214, 139, 0.12);
       overflow: hidden;
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
@@ -98,8 +98,8 @@
       font-size: clamp(2rem, 3vw, 3.5rem);
       line-height: 0.9;
       letter-spacing: 0.03em;
-      color: #2f8a6d;
-      text-shadow: 0 1px 0 rgba(255,255,255,0.9), 0 6px 18px rgba(83, 237, 168, 0.15);
+      color: #0c8d66;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.9), 0 6px 18px rgba(0, 214, 139, 0.1);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -118,9 +118,9 @@
       color: var(--ink);
       padding: 8px 16px;
       border-radius: 999px;
-      border: 1px solid rgba(124, 186, 160, 0.9);
+      border: 1px solid rgba(12, 141, 102, 0.35);
       background: linear-gradient(180deg, rgba(255, 246, 209, 0.9), rgba(214, 255, 234, 0.54));
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.95), 0 1px 0 rgba(110, 176, 154, 0.26);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.95), 0 1px 0 rgba(0, 214, 139, 0.14);
     }
 
     .nav {
@@ -130,7 +130,7 @@
       flex-wrap: wrap;
       gap: clamp(12px, 2vw, 32px);
       padding: 14px 18px 15px;
-      background: linear-gradient(180deg, rgba(177, 245, 206, 0.44), rgba(121, 224, 181, 0.22));
+      background: linear-gradient(180deg, rgba(129, 245, 198, 0.32), rgba(0, 214, 139, 0.1));
       border-bottom: 1px solid var(--line);
     }
 
@@ -144,16 +144,16 @@
       font-size: clamp(0.9rem, 1.2vw, 1.35rem);
       color: var(--ink);
       background: linear-gradient(180deg, var(--button-top), var(--button-mid) 52%, var(--button-bottom));
-      border: 1px solid rgba(109, 181, 152, 0.9);
+      border: 1px solid rgba(19, 170, 118, 0.4);
       box-shadow:
         inset 0 1px 0 rgba(255,255,255,0.95),
-        inset 0 -2px 0 rgba(118, 194, 164, 0.18),
-        0 3px 10px rgba(99, 176, 150, 0.18);
+        inset 0 -2px 0 rgba(0, 214, 139, 0.12),
+        0 3px 10px rgba(0, 214, 139, 0.14);
       text-shadow: 0 1px 0 rgba(255,255,255,0.65);
     }
 
     .search-row {
-      background: linear-gradient(180deg, rgba(173, 246, 205, 0.34), rgba(122, 228, 184, 0.22));
+      background: linear-gradient(180deg, rgba(130, 236, 189, 0.18), rgba(0, 214, 139, 0.08));
       border-bottom: 1px solid var(--line);
       padding: 16px 20px 20px;
     }
@@ -170,9 +170,9 @@
       flex: 1;
       height: 64px;
       border-radius: 20px;
-      border: 1px solid rgba(113, 177, 151, 0.8);
+      border: 1px solid rgba(19, 170, 118, 0.38);
       background: linear-gradient(180deg, rgba(255, 246, 209, 0.85), rgba(232, 255, 244, 0.56));
-      box-shadow: inset 0 2px 5px rgba(119, 186, 160, 0.18), inset 0 1px 0 rgba(255,255,255,0.9);
+      box-shadow: inset 0 2px 5px rgba(0, 214, 139, 0.08), inset 0 1px 0 rgba(255,255,255,0.9);
       padding: 0 18px;
       font-family: inherit;
       font-size: clamp(1rem, 1.55vw, 1.7rem);
@@ -184,9 +184,9 @@
       min-width: 150px;
       height: 64px;
       border-radius: 20px;
-      border: 1px solid rgba(113, 177, 151, 0.85);
+      border: 1px solid rgba(19, 170, 118, 0.35);
       background: linear-gradient(180deg, #fffdf8, #fff5d8 55%, #e8f9de);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 3px 10px rgba(83, 237, 168, 0.14);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 3px 10px rgba(0, 214, 139, 0.1);
       color: var(--ink);
       font-family: inherit;
       font-size: clamp(1rem, 1.55vw, 1.7rem);
@@ -201,7 +201,7 @@
 
     .tutorial-shell {
       background: rgba(255, 246, 209, 0.16);
-      border: 1px solid rgba(126, 191, 167, 0.5);
+      border: 1px solid rgba(0, 214, 139, 0.35);
       border-radius: 24px;
       padding: 22px 18px 18px;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
@@ -236,12 +236,6 @@
       padding-left: 18px;
     }
 
-    .intro-text {
-      font-size: clamp(1.1rem, 1.7vw, 1.55rem);
-      letter-spacing: 0.01em;
-      margin: 12px 0 18px;
-    }
-
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -251,7 +245,7 @@
 
     .mini {
       background: rgba(255, 246, 209, 0.18);
-      border: 1px solid rgba(126, 191, 167, 0.6);
+      border: 1px solid rgba(0, 214, 139, 0.3);
       border-radius: 18px;
       padding: 14px 14px 12px;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.85);
@@ -273,7 +267,7 @@
       padding: 14px 16px;
       overflow-x: auto;
       margin: 12px 0 0;
-      border: 1px solid rgba(100, 172, 145, 0.42);
+      border: 1px solid rgba(0, 214, 139, 0.25);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.09);
     }
 
@@ -293,8 +287,8 @@
       border-radius: 14px;
       color: var(--ink);
       background: linear-gradient(180deg, rgba(255, 246, 209, 0.85), rgba(215, 255, 237, 0.72));
-      border: 1px solid rgba(126, 191, 167, 0.8);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 3px 10px rgba(103, 177, 148, 0.14);
+      border: 1px solid rgba(0, 214, 139, 0.28);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 3px 10px rgba(0, 214, 139, 0.08);
       margin-top: 10px;
     }
 
@@ -303,13 +297,13 @@
       border-collapse: collapse;
       margin-top: 10px;
       background: rgba(255, 246, 209, 0.22);
-      border: 1px solid rgba(126, 191, 167, 0.8);
+      border: 1px solid rgba(0, 214, 139, 0.28);
       border-radius: 14px;
       overflow: hidden;
     }
 
     th, td {
-      border: 1px solid rgba(126, 191, 167, 0.8);
+      border: 1px solid rgba(0, 214, 139, 0.28);
       padding: 10px 12px;
       text-align: left;
       background: rgba(255, 246, 209, 0.08);
@@ -320,7 +314,7 @@
       padding: 18px 20px;
       border-radius: 18px;
       background: linear-gradient(180deg, rgba(255, 246, 209, 0.28), rgba(181, 235, 206, 0.18));
-      border: 1px solid rgba(126, 191, 167, 0.6);
+      border: 1px solid rgba(0, 214, 139, 0.35);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
       color: var(--ink);
       font-size: clamp(1.04rem, 1.5vw, 1.5rem);
@@ -363,11 +357,11 @@
     <div class="wrapper">
       <header class="masthead">
         <div class="brand-wrap">
-          <div class="wordmark">Readmes of Your Own</div>
+          <div class="wordmark">Readmes of Our Own</div>
         </div>
 
         <div class="login-wrap">
-          <a href="#" class="login-btn">Signed In!</a>
+          <a href="#" class="login-btn">Log In</a>
         </div>
       </header>
 
