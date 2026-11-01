@@ -21,9 +21,10 @@
         header {
             background-color: #000339;
             padding: 25px;
-            border-radius: 20px;
+            border-radius: 24px;
             border: 3px solid #000000;
-            margin-bottom: 35px;
+            box-shadow: 0 0 0 4px #FFFFFF;
+            margin-bottom: 55px;
             text-align: center;
         }
 
@@ -38,23 +39,27 @@
         .section-box {
             position: relative;
             background-color: #000339;
-            padding: 35px;
-            border-radius: 24px;
-            margin-bottom: 45px;
-            box-shadow: 0 6px 0px rgba(0,0,0,1);
+            padding: 45px;
+            margin-bottom: 65px;
             border: 4px solid #000000;
+            box-shadow: 0 0 0 4px #FFFFFF, 0 8px 0px 4px rgba(0,0,0,1);
         }
 
         .section-box::before {
             content: "";
             position: absolute;
-            top: -12px;
-            left: 20px;
-            right: 20px;
-            height: 12px;
-            background-image: radial-gradient(circle at 50% 100%, #000339 8px, #000000 10px, transparent 11px);
-            background-size: 24px 12px;
-            background-repeat: repeat-x;
+            top: -16px;
+            bottom: -16px;
+            left: -16px;
+            right: -16px;
+            background-image: 
+                radial-gradient(circle at 16px 0px, transparent 16px, #000000 16px, #000000 20px, #FFFFFF 20px, #FFFFFF 24px, transparent 24px),
+                radial-gradient(circle at 16px 32px, transparent 16px, #000000 16px, #000000 20px, #FFFFFF 20px, #FFFFFF 24px, transparent 24px),
+                radial-gradient(circle at 0px 16px, transparent 16px, #000000 16px, #000000 20px, #FFFFFF 20px, #FFFFFF 24px, transparent 24px),
+                radial-gradient(circle at 32px 16px, transparent 16px, #000000 16px, #000000 20px, #FFFFFF 20px, #FFFFFF 24px, transparent 24px);
+            background-size: 32px 32px;
+            background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+            background-position: top center, bottom center, left center, right center;
             pointer-events: none;
         }
         
@@ -150,7 +155,7 @@
 <div class="section-box">
     <h2>3. Adding Images & Resizing</h2>
     <p>To dump an image straight onto your profile, start with an exclamation mark `!`, put a random description inside `[ ]`, and drop the direct image link inside `( )`:</p>
-    <pre><code>[[Cool Profile Banner](https://unsplash.com)</code></pre>
+    <pre><code>![Cool Profile Banner](https://unsplash.com)</code></pre>
 
     <h3>Where to Host Your Images</h3>
     <p>GitHub needs links that end exactly in `.png`, `.jpg`, or `.gif` to show your graphics. Use these free spots to host your art files:</p>
@@ -185,8 +190,8 @@
 
 <div class="section-box" style="text-align: center;">
     <h2>Need Help?</h2>
-    <p>If you're stuck or need help making your profile look right, just ask on my atabook ^_^ !</p>
-    <p><a href="" target="_blank" style="font-weight: bold; font-size: 19px;">Visit my atabook: khomedy</a></p>
+    <p>If you're stuck or need help making your profile look right, ask me on my atabook!</p>
+    <p><a href="" target="_blank" style="font-weight: bold; font-size: 19px;">atabook</a></p>
 </div>
 
 </body>
