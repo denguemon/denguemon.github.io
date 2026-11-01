@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Archive of Our Own | GitHub Readme Guide</title>
+  <title>Readmes of Our Own | GitHub Readme Guide</title>
   <style>
     :root {
       --paper: #f5f0eb;
       --paper-2: #f8f4f1;
-      --panel: #f9f7f4;
-      --card: rgba(255, 255, 255, 0.22);
+      --panel: #faf7f4;
       --ink: #2a1c1d;
       --muted: #6d5c5a;
       --line: #d8cfc7;
@@ -63,8 +62,8 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      min-height: 150px;
-      padding: 14px 24px 10px;
+      min-height: 120px;
+      padding: 10px 26px 8px;
       background: #f4f1ee;
       border-bottom: 1px solid var(--line);
     }
@@ -72,49 +71,14 @@
     .brand-wrap {
       display: flex;
       align-items: center;
-      gap: 18px;
+      justify-content: center;
       flex: 1;
       min-width: 0;
     }
 
-    .logo {
-      position: relative;
-      width: 120px;
-      height: 90px;
-      flex-shrink: 0;
-      margin-left: 4px;
-    }
-
-    .logo::before,
-    .logo::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      margin: auto;
-      width: 92px;
-      height: 62px;
-      border: 5px solid #3b1719;
-      border-top-color: transparent;
-      border-left-color: transparent;
-      border-radius: 50%;
-      transform: rotate(26deg);
-      opacity: 0.9;
-    }
-
-    .logo::after {
-      width: 42px;
-      height: 42px;
-      border-width: 4px;
-      transform: rotate(45deg);
-      top: 22px;
-      left: 20px;
-      border-top-color: transparent;
-      border-left-color: transparent;
-    }
-
     .wordmark {
-      font-size: clamp(3rem, 7vw, 7.2rem);
-      line-height: 0.9;
+      font-size: clamp(2.1rem, 4vw, 4.3rem);
+      line-height: 0.92;
       letter-spacing: -0.05em;
       font-weight: 700;
       color: #3a1718;
@@ -122,10 +86,11 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      text-align: center;
     }
 
     .beta {
-      font-size: clamp(1.2rem, 2vw, 2.6rem);
+      font-size: clamp(1rem, 1.5vw, 1.7rem);
       margin-left: 8px;
       font-style: italic;
       color: #5d4f51;
@@ -141,7 +106,7 @@
     }
 
     .login-btn {
-      font-size: clamp(1.2rem, 2vw, 2.6rem);
+      font-size: clamp(1.2rem, 1.7vw, 2.1rem);
       font-weight: 700;
       color: var(--ink);
       padding: 6px 6px;
@@ -153,16 +118,17 @@
       border-bottom: 1px solid rgba(0,0,0,0.15);
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: clamp(18px, 3vw, 72px);
       flex-wrap: wrap;
-      padding: 18px 20px 16px;
+      padding: 16px 18px 14px;
       color: #fff3f1;
     }
 
     .nav a {
       display: inline-block;
       color: #fff3f1;
-      font-size: clamp(1.6rem, 2vw, 2.8rem);
+      font-size: clamp(1.3rem, 1.9vw, 2.1rem);
       font-weight: 700;
       letter-spacing: -0.02em;
       text-shadow: 0 1px 0 rgba(0,0,0,0.12);
@@ -191,23 +157,23 @@
       background: #f0eeeb;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
       padding: 0 18px;
-      font-size: clamp(1.15rem, 2vw, 2.3rem);
+      font-size: clamp(1.1rem, 1.8vw, 2.1rem);
       color: var(--ink);
       font-family: Georgia, serif;
     }
 
     .search-button {
-      min-width: 180px;
+      min-width: 170px;
       height: 72px;
       border: 1px solid rgba(78, 49, 48, 0.34);
       border-radius: 22px;
       background: #f5f1ee;
       color: var(--ink);
-      font-size: clamp(1.3rem, 2vw, 2.5rem);
-      font-family: Georgia, serif;
+      font-size: clamp(1.2rem, 1.8vw, 2.2rem);
       font-weight: 700;
-      cursor: pointer;
+      font-family: Georgia, serif;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
+      cursor: pointer;
     }
 
     .content {
@@ -234,7 +200,7 @@
 
     .sidebar-box h3 {
       margin: 0 0 10px;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: #3d2022;
       font-weight: 700;
       letter-spacing: 0.02em;
@@ -394,7 +360,7 @@
       }
 
       .wordmark {
-        font-size: clamp(2.2rem, 10vw, 4rem);
+        font-size: clamp(2.2rem, 9vw, 3.8rem);
       }
 
       .login-wrap {
@@ -423,8 +389,7 @@
     <div class="wrapper">
       <header class="masthead">
         <div class="brand-wrap">
-          <div class="logo" aria-label="Archive icon"></div>
-          <div class="wordmark">Archive of Our Own<span class="beta">beta</span></div>
+          <div class="wordmark">Readmes of Our Own<span class="beta">beta</span></div>
         </div>
 
         <div class="login-wrap">
@@ -433,10 +398,11 @@
       </header>
 
       <nav class="nav" aria-label="Main navigation">
-        <a href="#alignment">Fandoms</a>
-        <a href="#links">Browse</a>
-        <a href="#images">Search</a>
-        <a href="#tools">About</a>
+        <a href="#alignment">Alignment</a>
+        <a href="#links">Links</a>
+        <a href="#images">Images</a>
+        <a href="#writing">Writing</a>
+        <a href="#tools">Tools</a>
       </nav>
 
       <div class="search-row">
@@ -483,11 +449,11 @@
             </p>
 
             <div class="nav-row">
-              <a href="#alignment">Alignment</a>
-              <a href="#links">Links</a>
-              <a href="#images">Images</a>
-              <a href="#writing">Writing</a>
-              <a href="#tools">Tools</a>
+              <a href="#alignment">Jump to Alignment</a>
+              <a href="#links">Jump to Links</a>
+              <a href="#images">Jump to Images</a>
+              <a href="#writing">Jump to Writing</a>
+              <a href="#tools">Jump to Tools</a>
             </div>
 
             <section id="alignment" class="reveal" style="margin-top:22px;">
