@@ -351,6 +351,8 @@
         <a href="#links">Links</a>
         <a href="#images">Images</a>
         <a href="#writing">Writing</a>
+        <a href="#tables">Tables</a>
+        <a href="#permissions">Permissions</a>
         <a href="#tools">Tools</a>
       </nav>
 
@@ -370,6 +372,8 @@
             <a href="#links">Jump to Links</a>
             <a href="#images">Jump to Images</a>
             <a href="#writing">Jump to Writing</a>
+            <a href="#tables">Jump to Tables</a>
+            <a href="#permissions">Jump to Permissions</a>
             <a href="#tools">Jump to Tools</a>
           </div>
 
@@ -440,8 +444,57 @@
             <pre><code>$\color{#00AC60}{\text{This text is custom green}}$</code></pre>
           </section>
 
+          <section id="tables" style="margin-top:26px;">
+            <h2>5. Using Tables in a README</h2>
+            <p>Tables are useful when you want to compare information side by side, like features, permissions, links, or setup steps.</p>
+
+            <pre><code>| Feature | Description | Status |
+| --- | --- | --- |
+| Header | Big title banner | ✅ |
+| Links | Section navigation | ✅ |
+| Tables | Quick comparison layout | ✅ |
+| Images | Visual examples | ✅ |</code></pre>
+
+            <p>That renders like this:</p>
+
+            <table style="width:100%; border-collapse:collapse; border:1px solid #d8cfc7; margin-top:8px;">
+              <thead>
+                <tr>
+                  <th style="border:1px solid #d8cfc7; padding:8px 10px; text-align:left;">Feature</th>
+                  <th style="border:1px solid #d8cfc7; padding:8px 10px; text-align:left;">Description</th>
+                  <th style="border:1px solid #d8cfc7; padding:8px 10px; text-align:left;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border:1px solid #d8cfc7; padding:8px 10px;">Header</td>
+                  <td style="border:1px solid #d8cfc7; padding:8px 10px;">Big title banner</td>
+                  <td style="border:1px solid #d8cfc7; padding:8px 10px;">✅</td>
+                </tr>
+                <tr>
+                  <td style="border:1px solid #d8cfc7; padding:8px 10px;">Links</td>
+                  <td style="border:1px solid #d8cfc7; padding:8px 10px;">Section navigation</td>
+                  <td style="border:1px solid #d8cfc7; padding:8px 10px;">✅</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="permissions" style="margin-top:26px;">
+            <h2>6. Permissions and Access</h2>
+            <p>Use a quick table when you need to show who can do what, or which actions are allowed for each role.</p>
+
+            <pre><code>| Role | Can View | Can Edit | Can Delete |
+| --- | --- | --- | --- |
+| Viewer | ✅ | ❌ | ❌ |
+| Editor | ✅ | ✅ | ❌ |
+| Admin | ✅ | ✅ | ✅ |</code></pre>
+
+            <p>This makes permissions much easier to scan at a glance, especially in project or team documentation.</p>
+          </section>
+
           <section id="tools" style="margin-top:26px;">
-            <h2>5. Good Tools to Use</h2>
+            <h2>7. Good Tools to Use</h2>
             <ul>
               <li><a href="https://yoksel.github.io" target="_blank">SVG Gradient Map Filter</a>: recolor assets into a consistent visual theme.</li>
               <li><a href="https://shields.io" target="_blank">Shields.io</a>: make colorful badge-style labels.</li>
