@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>github readme tutorial !</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <style>
         body {
             background: linear-gradient(to bottom, #E0E0E0, #92C11B);
             background-attachment: fixed;
-            color: #00AC60;
+            color: #000339;
             font-family: 'Fredoka', 'Segoe UI', sans-serif;
             font-weight: 500;
             line-height: 1.6;
@@ -19,7 +19,7 @@
         }
         
         header {
-            background-color: #000339;
+            background-color: #00AC60;
             padding: 25px;
             border-radius: 24px;
             border: 3px solid #000000;
@@ -29,7 +29,7 @@
         }
 
         h1 {
-            color: #00AC60;
+            color: #000339;
             margin: 0;
             padding-bottom: 5px;
             font-size: 36px;
@@ -38,7 +38,7 @@
 
         .section-box {
             position: relative;
-            background-color: #000339;
+            background-color: #00AC60;
             padding: 45px;
             margin: 40px 20px 65px 20px;
             border: 4px solid #000000;
@@ -47,7 +47,7 @@
         }
         
         h2 {
-            color: #00AC60;
+            color: #000339;
             margin-top: 0;
             border-bottom: 3px solid #000000;
             padding-bottom: 8px;
@@ -56,7 +56,7 @@
         }
         
         p, li {
-            color: #00AC60;
+            color: #000339;
             font-size: 17px;
         }
 
@@ -75,7 +75,7 @@
             border-radius: 12px;
             overflow-x: auto;
             border: 3px solid #000000;
-            border-left: 6px solid #00AC60;
+            border-left: 6px solid #000339;
         }
         
         pre code {
@@ -85,7 +85,7 @@
         }
         
         a {
-            color: #00AC60;
+            color: #000339;
             text-decoration: underline;
         }
         
@@ -105,20 +105,20 @@
 <body>
 
 <header>
-    <h1>GitHub Profile Customization Guide</h1>
-    <p style="font-style: italic; margin: 5px 0 0 0;">By @denguemon</p>
+    <h1>Simple Github Readme Guide</h1>
+    <p style="font-style: italic; margin: 5px 0 0 0; color: #000339;">By @denguemon</p>
 </header>
 
 <div class="section-box">
     <h2>1. Moving Stuff Around (Alignment)</h2>
-    <p>Normally, GitHub pushes all your text and images to the left side. If you want to force your stuff to stay on the left, center, or right, wrap it in these blocks:</p>
+    <p>div tags for positioning layouts.</p>
     
     <p>To explicitly keep things on the left:</p>
     <pre><code>&lt;div align="left"&gt;
     This text stays on the left.
 &lt;/div&gt;</code></pre>
 
-    <p>To center your text, pony sprites, or banners:</p>
+    <p>To center your stuff:</p>
     <pre><code>&lt;div align="center"&gt;
     This text is centered.
 &lt;/div&gt;</code></pre>
@@ -131,30 +131,29 @@
 
 <div class="section-box">
     <h2>2. Adding Links</h2>
-    <p>Want a clickable link? Put the word people click inside square brackets `[ ]` and the website link inside normal parentheses `( )` right next to it with no spaces:</p>
-    <pre><code>[Check out my website](https://denguemon.github.io)</code></pre>
+    <p>brackets and parentheses code syntax for clickable hyperlinks.</p>
+    <pre><code>[Check out my website](https://github.io)</code></pre>
 </div>
 
 <div class="section-box">
     <h2>3. Adding Images & Resizing</h2>
-    <p>To dump an image straight onto your profile, start with an exclamation mark `!`, put a random description inside `[ ]`, and drop the direct image link inside `( )`:</p>
+    <p>exclamation markdown syntax for displaying art visuals.</p>
     <pre><code>![Cool Profile Banner](https://unsplash.com)</code></pre>
 
     <h3>Where to Host Your Images</h3>
-    <p>GitHub needs links that end exactly in `.png`, `.jpg`, or `.gif` to show your graphics. Use these free spots to host your art files:</p>
     <ul>
-        <li><a href="https://filegarden.com" target="_blank">File Garden</a>: Great for saving your custom pixel art sprites and templates permanently.</li>
-        <li><a href="https://catbox.moe" target="_blank">Catbox.moe</a>: Super quick and easy host to get clean, direct file links.</li>
+        <li><a href="https://filegarden.com" target="_blank">File Garden</a>: platform for uploading permanent digital assets and pixel graphics.</li>
+        <li><a href="https://catbox.moe" target="_blank">Catbox.moe</a>: file host for getting quick raw asset links.</li>
     </ul>
 
     <h3>Fixing Giant Images (Sizing)</h3>
-    <p>Normal Markdown doesn't let you change photo sizes, so your graphics might end up huge. Use this HTML tag instead to lock the width. The height will fix itself automatically so it doesn't look stretched:</p>
+    <p>img widths for custom dimension properties.</p>
     <pre><code>&lt;img src="your-image-link.png" width="200" /&gt;</code></pre>
 </div>
 
 <div class="section-box">
     <h2>4. Writing in Color</h2>
-    <p>GitHub blocks regular text color codes. To cheat the system and get colored text on your profile, you have to use math codes. Copy this template exactly, swap the hex color code, and type your text inside the final `{ }` block:</p>
+    <p>LaTeX block scripts for bypassing color block configurations.</p>
     
     <pre><code>$\color{#HexColorCode}{\text{Your text here}}$</code></pre>
 
@@ -164,17 +163,17 @@
 
 <div class="section-box">
     <h2>5. Good Tools to Use</h2>
-    <p>Check out these websites to make your layout look way better:</p>
     <ul>
-        <li><a href="https://github.io" target="_blank">SVG Gradient Map Filter</a>: Cool tool to add nice color overlays onto your graphics.</li>
-        <li><a href="https://shields.io" target="_blank">Shields.io</a>: Makes those clean, colorful status tags and button badges you see on profiles.</li>
+        <li><a href="https://github.io" target="_blank">SVG Gradient Map Filter</a>: online tool for recoloring assets into unified themes.</li>
+        <li><a href="https://shields.io" target="_blank">Shields.io</a>: badge creator for generating colorful custom status templates.</li>
+        <li><a href="https://hits.sh" target="_blank">hits.sh</a>: tracker badges for counting total channel traffic visits.</li>
     </ul>
 </div>
 
 <div class="section-box" style="text-align: center;">
     <h2>Need Help?</h2>
-    <p>If you're stuck or need help making your profile look right, ask for help on my atabook!</p>
-    <p><a href="https://khomedy.atabook.org" target="_blank" style="font-weight: bold; font-size: 19px;">Visit my atabook: khomedy</a></p>
+    <p>just ask on my atabook!</p>
+    <p><a href="https://khomedy.atabook.org" target="_blank" style="font-weight: bold; font-size: 19px;">atabook</a></p>
 </div>
 
 </body>
