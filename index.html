@@ -118,6 +118,7 @@
         }
 
         .pill {
+            display: inline-block;
             border-radius: 999px;
             background: rgba(255,255,255,0.4);
             border: 1px solid rgba(255,255,255,0.8);
@@ -125,6 +126,15 @@
             padding: 7px 14px;
             font-size: 0.8rem;
             font-weight: 600;
+            color: var(--ink);
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .pill:hover {
+            background: rgba(255,255,255,0.6);
+            transform: translateY(-2px);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 12px 18px rgba(32, 98, 95, 0.12);
             color: var(--ink);
         }
 
@@ -280,17 +290,17 @@
                     <a href="https://github.com/denguemon" target="_blank">By @denguemon</a>
                 </div>
                 <div class="pill-row">
-                    <span class="pill">Alignment</span>
-                    <span class="pill">Links</span>
-                    <span class="pill">Images</span>
-                    <span class="pill">Writing</span>
-                    <span class="pill">Tools</span>
+                    <a href="#alignment" class="pill">Alignment</a>
+                    <a href="#links" class="pill">Links</a>
+                    <a href="#images" class="pill">Images</a>
+                    <a href="#writing" class="pill">Writing</a>
+                    <a href="#tools" class="pill">Tools</a>
                 </div>
             </div>
         </header>
 
         <main>
-            <section class="card reveal">
+            <section id="alignment" class="card reveal">
                 <h2>1. Moving Stuff Around</h2>
                 <p>Use <code>div</code> tags to control where content sits on the page.</p>
 
@@ -317,13 +327,13 @@
                 </div>
             </section>
 
-            <section class="card reveal">
+            <section id="links" class="card reveal">
                 <h2>2. Adding Links</h2>
                 <p>Use brackets and parentheses to make clickable links.</p>
                 <pre><code>[Check out my website](https://github.io)</code></pre>
             </section>
 
-            <section class="card reveal">
+            <section id="images" class="card reveal">
                 <h2>3. Adding Images & Resizing</h2>
                 <p>Use an exclamation mark plus a link to display an image.</p>
                 <pre><code>![Cool Profile Banner](https://unsplash.com)</code></pre>
@@ -339,7 +349,7 @@
                 <pre><code>&lt;img src="your-image-link.png" width="200" /&gt;</code></pre>
             </section>
 
-            <section class="card reveal">
+            <section id="writing" class="card reveal">
                 <h2>4. Writing</h2>
                 <p>Use custom styling to make specific words or lines stand out from the rest of the page.</p>
 
@@ -356,7 +366,7 @@
                 <pre><code>$\color{#00AC60}{\text{This text is custom green}}$</code></pre>
             </section>
 
-            <section class="card reveal">
+            <section id="tools" class="card reveal">
                 <h2>5. Good Tools to Use</h2>
                 <ul>
                     <li><a href="https://yoksel.github.io" target="_blank">SVG Gradient Map Filter</a>: recolor assets into a consistent visual theme.</li>
