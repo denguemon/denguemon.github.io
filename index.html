@@ -3,29 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Archive of Our Own</title>
+  <title>Archive of Our Own | GitHub Readme Guide</title>
   <style>
     :root {
-      --paper: #f6f3ef;
-      --paper-2: #f2eee9;
-      --panel: #faf7f4;
+      --paper: #f5f0eb;
+      --paper-2: #f8f4f1;
+      --panel: #f9f7f4;
+      --card: rgba(255, 255, 255, 0.22);
       --ink: #2a1c1d;
-      --muted: #6f5c5a;
+      --muted: #6d5c5a;
       --line: #d8cfc7;
-      --red-1: #7c1016;
+      --red-1: #7d1018;
       --red-2: #8b1717;
       --red-3: #a51b1d;
-      --red-4: #3d0607;
-      --button: #f2efeb;
-      --button-border: #c5b9b2;
-      --shadow: rgba(55, 35, 33, 0.12);
+      --button: #f1ece7;
+      --button-border: #c9beb6;
+      --soft-lavender: #efe7f7;
+      --soft-rose: #f7e9ee;
+      --soft-mint: #eaf3ed;
+      --shadow: rgba(73, 52, 53, 0.12);
     }
 
     * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 18px;
+      scroll-padding-top: 16px;
     }
 
     body {
@@ -33,7 +36,7 @@
       background: var(--paper);
       color: var(--ink);
       font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     a {
@@ -46,7 +49,7 @@
       background: var(--paper);
     }
 
-    .shell {
+    .wrapper {
       width: min(1600px, calc(100% - 20px));
       margin: 0 auto;
       background: var(--paper-2);
@@ -61,10 +64,9 @@
       justify-content: space-between;
       gap: 24px;
       min-height: 150px;
-      padding: 12px 24px 8px;
+      padding: 14px 24px 10px;
       background: #f4f1ee;
       border-bottom: 1px solid var(--line);
-      position: relative;
     }
 
     .brand-wrap {
@@ -77,8 +79,8 @@
 
     .logo {
       position: relative;
-      width: 136px;
-      height: 106px;
+      width: 120px;
+      height: 90px;
       flex-shrink: 0;
       margin-left: 4px;
     }
@@ -89,13 +91,13 @@
       position: absolute;
       inset: 0;
       margin: auto;
-      width: 96px;
+      width: 92px;
       height: 62px;
-      border: 5px solid #3a1818;
+      border: 5px solid #3b1719;
       border-top-color: transparent;
       border-left-color: transparent;
       border-radius: 50%;
-      transform: rotate(25deg);
+      transform: rotate(26deg);
       opacity: 0.9;
     }
 
@@ -103,31 +105,31 @@
       width: 42px;
       height: 42px;
       border-width: 4px;
-      transform: rotate(38deg);
-      top: 20px;
-      left: 24px;
+      transform: rotate(45deg);
+      top: 22px;
+      left: 20px;
       border-top-color: transparent;
       border-left-color: transparent;
     }
 
     .wordmark {
       font-size: clamp(3rem, 7vw, 7.2rem);
-      font-weight: 700;
-      font-style: italic;
-      letter-spacing: -0.05em;
       line-height: 0.9;
-      color: #3b1818;
+      letter-spacing: -0.05em;
+      font-weight: 700;
+      color: #3a1718;
+      font-style: italic;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
     .beta {
-      font-size: clamp(1.2rem, 2vw, 2.4rem);
-      vertical-align: top;
-      margin-left: 6px;
+      font-size: clamp(1.2rem, 2vw, 2.6rem);
+      margin-left: 8px;
       font-style: italic;
-      color: #5d4d50;
+      color: #5d4f51;
+      vertical-align: top;
     }
 
     .login-wrap {
@@ -139,239 +141,244 @@
     }
 
     .login-btn {
-      font-size: clamp(1.3rem, 2vw, 2.8rem);
+      font-size: clamp(1.2rem, 2vw, 2.6rem);
       font-weight: 700;
       color: var(--ink);
-      padding: 8px 4px;
+      padding: 6px 6px;
     }
 
     .nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: clamp(18px, 3vw, 72px);
-      padding: 16px 18px 18px;
       background: linear-gradient(180deg, var(--red-3), var(--red-2));
       border-top: 1px solid rgba(255,255,255,0.18);
-      border-bottom: 1px solid rgba(0,0,0,0.18);
-      color: #fff6f3;
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+      display: flex;
+      justify-content: center;
+      gap: clamp(18px, 3vw, 72px);
       flex-wrap: wrap;
+      padding: 18px 20px 16px;
+      color: #fff3f1;
     }
 
     .nav a {
       display: inline-block;
-      color: #fff6f3;
-      font-size: clamp(1.5rem, 2vw, 2.8rem);
+      color: #fff3f1;
+      font-size: clamp(1.6rem, 2vw, 2.8rem);
       font-weight: 700;
       letter-spacing: -0.02em;
       text-shadow: 0 1px 0 rgba(0,0,0,0.12);
     }
 
-    .nav a:hover {
-      opacity: 0.9;
-    }
-
     .search-row {
       background: linear-gradient(180deg, var(--red-2), var(--red-1));
       padding: 18px 20px 22px;
-      border-bottom: 1px solid rgba(0,0,0,0.12);
+      border-bottom: 1px solid rgba(0,0,0,0.15);
     }
 
     .search-bar {
       width: min(1400px, 100%);
       margin: 0 auto;
       display: flex;
-      gap: 12px;
+      gap: 14px;
       align-items: center;
     }
 
     .search-field {
       flex: 1;
+      min-width: 0;
       height: 72px;
       border-radius: 22px;
+      border: 1px solid rgba(78, 49, 48, 0.35);
       background: #f0eeeb;
-      border: 1px solid rgba(64, 43, 40, 0.28);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
       padding: 0 18px;
-      font-size: clamp(1.1rem, 2vw, 2.2rem);
-      font-family: Georgia, serif;
+      font-size: clamp(1.15rem, 2vw, 2.3rem);
       color: var(--ink);
+      font-family: Georgia, serif;
     }
 
     .search-button {
-      min-width: 170px;
+      min-width: 180px;
       height: 72px;
+      border: 1px solid rgba(78, 49, 48, 0.34);
       border-radius: 22px;
-      background: #f4f0ee;
-      border: 1px solid rgba(64, 43, 40, 0.34);
+      background: #f5f1ee;
       color: var(--ink);
-      font-size: clamp(1.2rem, 2vw, 2.3rem);
-      font-weight: 700;
+      font-size: clamp(1.3rem, 2vw, 2.5rem);
       font-family: Georgia, serif;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
+      font-weight: 700;
       cursor: pointer;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
     }
 
     .content {
-      max-width: 1350px;
+      max-width: 1380px;
       margin: 0 auto;
-      padding: 18px 0 36px;
+      padding: 20px 16px 42px;
     }
 
-    .main-layout {
+    .main-grid {
       display: grid;
-      grid-template-columns: 260px minmax(0, 1fr) 260px;
-      gap: 26px;
+      grid-template-columns: 240px minmax(0, 1fr) 240px;
+      gap: 22px;
       align-items: start;
-      padding: 0 18px;
     }
 
     .sidebar-box {
-      background: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.2);
       border: 1px solid var(--line);
       border-radius: 14px;
       padding: 14px 14px 10px;
       margin-bottom: 18px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
     }
 
     .sidebar-box h3 {
       margin: 0 0 10px;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
+      color: #3d2022;
       font-weight: 700;
-      color: #3b2324;
       letter-spacing: 0.02em;
     }
 
     .sidebar-box ul {
+      list-style: none;
       margin: 0;
       padding: 0;
-      list-style: none;
     }
 
     .sidebar-box li {
-      padding: 5px 0;
-      font-size: 0.95rem;
-      color: var(--muted);
       border-bottom: 1px solid rgba(0,0,0,0.04);
+      padding: 5px 0;
+      color: var(--muted);
+      font-size: 0.96rem;
     }
 
     .sidebar-box li:last-child {
       border-bottom: none;
     }
 
-    .center-panel {
+    .tutorial-shell {
       background: rgba(255,255,255,0.14);
       border: 1px solid var(--line);
       border-radius: 18px;
-      padding: 20px 22px 18px;
-      min-height: 440px;
+      padding: 18px 18px 14px;
+      box-shadow: var(--shadow) 0 2px 8px;
     }
 
-    .section-title {
-      margin: 0 0 8px;
-      font-size: clamp(1.5rem, 2vw, 2.8rem);
-      font-weight: 700;
-      line-height: 1.3;
+    .tutorial-shell h2 {
+      margin: 0 0 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      font-size: clamp(1.5rem, 2vw, 2.3rem);
       color: var(--ink);
+      font-weight: 700;
       letter-spacing: -0.02em;
     }
 
-    .meta-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-    }
-
-    .meta-chip {
-      font-size: 0.9rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .intro {
-      font-size: clamp(1.2rem, 2vw, 2.4rem);
-      font-style: italic;
-      line-height: 1.3;
+    .tutorial-shell h3 {
       margin: 18px 0 10px;
-      color: #201515;
-    }
-
-    .summary-box {
-      background: #faf7f4;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin-top: 18px;
+      font-size: 1.1rem;
       color: var(--ink);
-    }
-
-    .summary-box h4 {
-      margin: 0 0 10px;
-      font-size: 1.2rem;
       font-weight: 700;
     }
 
-    .summary-box ul {
-      margin: 0;
+    .tutorial-shell p, .tutorial-shell li {
+      color: var(--ink);
+      font-size: 1rem;
+      margin: 0 0 10px;
+    }
+
+    .tutorial-shell ul {
+      margin: 0 0 8px;
       padding-left: 18px;
     }
 
-    .summary-box li {
-      margin-bottom: 8px;
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 8px;
     }
 
-    .jump-row {
+    .mini {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 12px 10px;
+    }
+
+    code {
+      background: rgba(34, 30, 33, 0.92);
+      color: #f1e7bd;
+      border-radius: 6px;
+      padding: 3px 7px;
+      font-size: 0.9rem;
+      font-family: 'Courier New', monospace;
+    }
+
+    pre {
+      background: rgba(32, 28, 31, 0.94);
+      color: #efebd9;
+      border-radius: 12px;
+      padding: 14px 12px;
+      overflow-x: auto;
+      margin: 12px 0 0;
+      border: 1px solid rgba(0,0,0,0.07);
+    }
+
+    pre code {
+      background: transparent;
+      color: #efebd9;
+      padding: 0;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      background: var(--soft-lavender);
+      border: 1px solid var(--button-border);
+      border-radius: 999px;
+      color: var(--ink);
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    .nav-row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 18px;
     }
 
-    .jump-row a {
+    .nav-row a {
       display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
       background: var(--button);
       border: 1px solid var(--button-border);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 700;
       color: var(--ink);
-      font-weight: 700;
-      font-size: 0.88rem;
     }
 
-    .bottom-row {
-      display: flex;
-      gap: 18px;
-      margin-top: 22px;
-      align-items: stretch;
-    }
-
-    .mini-card {
-      flex: 1;
-      background: rgba(255,255,255,0.2);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px 16px;
-      min-height: 130px;
-    }
-
-    .mini-card h5 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-      font-weight: 700;
-    }
-
-    .mini-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1rem;
+    section[id] {
+      scroll-margin-top: 28px;
     }
 
     @media (max-width: 1200px) {
-      .main-layout {
+      .main-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -380,7 +387,6 @@
       .masthead {
         flex-direction: column;
         align-items: flex-start;
-        min-height: auto;
       }
 
       .brand-wrap {
@@ -405,28 +411,32 @@
       .search-button {
         width: 100%;
       }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <div class="shell">
+    <div class="wrapper">
       <header class="masthead">
         <div class="brand-wrap">
-          <div class="logo" aria-label="AO3 style icon"></div>
+          <div class="logo" aria-label="Archive icon"></div>
           <div class="wordmark">Archive of Our Own<span class="beta">beta</span></div>
         </div>
 
         <div class="login-wrap">
-          <a class="login-btn" href="#">Log In</a>
+          <a href="#" class="login-btn">Log In</a>
         </div>
       </header>
 
       <nav class="nav" aria-label="Main navigation">
-        <a href="#fandoms">Fandoms</a>
-        <a href="#browse">Browse</a>
-        <a href="#search">Search</a>
-        <a href="#about">About</a>
+        <a href="#alignment">Fandoms</a>
+        <a href="#links">Browse</a>
+        <a href="#images">Search</a>
+        <a href="#tools">About</a>
       </nav>
 
       <div class="search-row">
@@ -436,8 +446,8 @@
         </div>
       </div>
 
-      <div class="content">
-        <div class="main-layout">
+      <main class="content">
+        <div class="main-grid">
           <aside>
             <div class="sidebar-box">
               <h3>Find your favorites</h3>
@@ -446,7 +456,6 @@
                 <li>Anime &amp; Manga</li>
                 <li>Books &amp; Literature</li>
                 <li>Cartoons &amp; Comics</li>
-                <li>Celebrities &amp; Real People</li>
                 <li>Movies</li>
                 <li>Music &amp; Bands</li>
                 <li>TV Shows</li>
@@ -459,51 +468,110 @@
               <ul>
                 <li>September 2024 Newsletter</li>
                 <li>AO3 update notes</li>
-                <li>Latest challenges</li>
+                <li>Challenges</li>
               </ul>
             </div>
           </aside>
 
-          <main class="center-panel">
-            <h1 class="section-title">A fan-created, fan-run, nonprofit, noncommercial archive for transformative fanworks.</h1>
+          <div class="tutorial-shell reveal">
+            <h2>A fan-created, fan-run, nonprofit, noncommercial archive for transformative fanworks.</h2>
 
-            <div class="meta-row">
-              <span class="meta-chip">More than 46,500 fandoms</span>
-              <span class="meta-chip">1,413,000 works</span>
-            </div>
+            <p><strong>More than 46,500 fandoms</strong> &nbsp; • &nbsp; <strong>1,413,000 works</strong></p>
 
-            <p class="intro">
-              We are a fan-run archive of transformative fanworks, like fanfiction, fanart, and podfic that are built by fans and for fans.
+            <p style="font-size:1.24rem; font-style:italic; margin-top:16px; margin-bottom:10px;">
+              A fan-created, fan-run, nonprofit, noncommercial archive for transformative fanworks, like fanfiction, fanart, fanvids, and podfic.
             </p>
 
-            <div class="summary-box">
-              <h4>With an AO3 account, you can:</h4>
+            <div class="nav-row">
+              <a href="#alignment">Alignment</a>
+              <a href="#links">Links</a>
+              <a href="#images">Images</a>
+              <a href="#writing">Writing</a>
+              <a href="#tools">Tools</a>
+            </div>
+
+            <section id="alignment" class="reveal" style="margin-top:22px;">
+              <h2>1. Moving Stuff Around</h2>
+              <p>Use <code>div</code> tags to control where content sits on the page.</p>
+
+              <div class="grid-2">
+                <div class="mini">
+                  <h3>Left</h3>
+                  <pre><code>&lt;div align="left"&gt;
+    This text stays on the left.
+&lt;/div&gt;</code></pre>
+                </div>
+
+                <div class="mini">
+                  <h3>Center</h3>
+                  <pre><code>&lt;div align="center"&gt;
+    This text is centered.
+&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+
+              <div class="mini" style="margin-top:16px;">
+                <h3>Right</h3>
+                <pre><code>&lt;div align="right"&gt;
+    This text goes to the right.
+&lt;/div&gt;</code></pre>
+              </div>
+            </section>
+
+            <section id="links" class="reveal" style="margin-top:26px;">
+              <h2>2. Adding Links</h2>
+              <p>Use brackets and parentheses to make clickable links.</p>
+              <pre><code>[Check out my website](https://github.io)</code></pre>
+            </section>
+
+            <section id="images" class="reveal" style="margin-top:26px;">
+              <h2>3. Adding Images &amp; Resizing</h2>
+              <p>Use an exclamation mark plus a link to display an image.</p>
+              <pre><code>![Cool Profile Banner](https://unsplash.com)</code></pre>
+
+              <h3>Where to host images</h3>
               <ul>
-                <li>Share your own fanworks</li>
-                <li>Get notified when your favorite works are updated</li>
-                <li>Track the works you love</li>
-                <li>Participate in challenges and communities</li>
+                <li><a href="https://filegarden.com" target="_blank">File Garden</a>: for permanent digital assets and art.</li>
+                <li><a href="https://catbox.moe" target="_blank">Catbox.moe</a>: quick file hosting for raw image links.</li>
               </ul>
-            </div>
 
-            <div class="jump-row">
-              <a href="#fandoms">Fandoms</a>
-              <a href="#browse">Browse</a>
-              <a href="#search">Search</a>
-              <a href="#about">About</a>
-            </div>
+              <h3>Fixing giant images</h3>
+              <p>Set a width so the image stays at a manageable size.</p>
+              <pre><code>&lt;img src="your-image-link.png" width="200" /&gt;</code></pre>
+            </section>
 
-            <div class="bottom-row">
-              <div class="mini-card">
-                <h5>Recent</h5>
-                <p>New works, discoveries, and updates across fandoms.</p>
-              </div>
-              <div class="mini-card">
-                <h5>Community</h5>
-                <p>Announcements, collections, and conversations from the archive.</p>
-              </div>
-            </div>
-          </main>
+            <section id="writing" class="reveal" style="margin-top:26px;">
+              <h2>4. Writing</h2>
+              <p>Use custom styling to make specific words or lines stand out from the rest of the page.</p>
+
+              <p>Dropdown text is a reveal-style block: a short heading appears first, and clicking the arrow shows the hidden content below it.</p>
+              <pre><code>&lt;details&gt;
+    &lt;summary&gt;Click me&lt;/summary&gt;
+    This is the hidden content that appears when the dropdown opens.
+&lt;/details&gt;</code></pre>
+
+              <p>To change the color of a single sentence or word:</p>
+              <pre><code>&lt;span style="color:#00AC60;"&gt;This text is custom green&lt;/span&gt;</code></pre>
+
+              <p>If you want a slightly more advanced version, you can also use color markup:</p>
+              <pre><code>$\color{#00AC60}{\text{This text is custom green}}$</code></pre>
+            </section>
+
+            <section id="tools" class="reveal" style="margin-top:26px;">
+              <h2>5. Good Tools to Use</h2>
+              <ul>
+                <li><a href="https://yoksel.github.io" target="_blank">SVG Gradient Map Filter</a>: recolor assets into a consistent visual theme.</li>
+                <li><a href="https://shields.io" target="_blank">Shields.io</a>: make colorful badge-style labels.</li>
+                <li><a href="https://hits.sh" target="_blank">hits.sh</a>: track traffic with a visitor badge.</li>
+              </ul>
+            </section>
+
+            <section class="reveal" style="margin-top:26px; text-align:center;">
+              <h2>Need Help?</h2>
+              <p>just ask on my atabook!</p>
+              <a href="https://khomedy.atabook.org" target="_blank" class="cta">Visit atabook</a>
+            </section>
+          </div>
 
           <aside>
             <div class="sidebar-box">
@@ -526,8 +594,25 @@
             </div>
           </aside>
         </div>
-      </div>
+      </main>
     </div>
   </div>
+
+  <script>
+    const revealItems = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    window.addEventListener('load', () => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    });
+  </script>
 </body>
 </html>
